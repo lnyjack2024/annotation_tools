@@ -1,0 +1,100 @@
+.easyform-form {
+  .easyform-input {
+    @include themify() {
+      background-color: theme(input-background-color);
+    }
+  }
+  .easyform-input:focus, .easyform-input-focused {
+    @include themify() {
+      border-color: theme(highlight-border-color);
+      box-shadow: none;
+    }
+  }
+  .easyform-input:hover {
+    @include themify() {
+      border-color: theme(default-border-color);
+    }
+  }
+  .easyform-radio-button-wrapper {
+    @include themify() {
+      border: 1px solid theme(default-border-color);
+      color: theme(default-font-color);
+    }
+    &::before{
+      display: none ;
+    }
+    &:hover{
+      @include themify() {
+        border-color: theme(highlight-border-color);
+        color: theme(highlight-font-color);
+      }
+    }
+    box-shadow: none!important;
+    background-color: transparent;
+    text-align: center;
+    margin-bottom: 8px;
+    overflow: hidden;
+    width: fit-content;
+    height: auto;
+    min-width: 113px;
+    &:first-child:last-child {
+      border-radius: 4px;
+    }
+    &>span {
+      white-space: pre-wrap!important;
+    }
+  }
+  .easyform-radio-button-wrapper-disabled:not(.easyform-radio-button-wrapper-checked) {
+    border-style: dashed;
+    @include themify() {
+      background-color: transparent;
+      border: 1px dashed theme(default-border-color);
+      color: theme(default-font-color);
+    }
+    &:hover{
+      @include themify() {
+        background-color: rgba(255, 255, 255, 0.08);
+        border: 1px dashed theme(default-border-color);
+        color: theme(default-font-color);
+      }
+    }
+  }
+  .easyform-radio-button-wrapper-checked:not(.easyform-radio-button-wrapper-disabled) {
+    @include themify() {
+      color: theme(highlight-font-color);
+      background-color: theme(default-button-background-color);
+      border-color: theme(highlight-border-color);
+    }
+    opacity: 1;
+    border: 1px solid ;
+    &:hover {
+      @include themify() {
+        color: theme(highlight-font-color);
+        border-color: theme(highlight-border-color);
+      }
+    }
+    &.easyform-radio-button-wrapper:first-child {
+      @include themify() {
+        border-color: theme(highlight-border-color);
+      }
+    }
+  }
+
+  .ant-radio-button-wrapper-disabled {
+    border-style: dashed;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: transparent;
+  }
+
+  .easyform-col {
+    flex: initial;
+    min-width: 113px;
+    margin-right: 16px;
+  }
+
+  .easyform-select:not(.easyform-select-customize-input) .easyform-select-selector {
+    @include themify() {
+      background-color: theme(input-background-color);
+    }
+  }
+}

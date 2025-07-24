@@ -1,0 +1,49 @@
+@import '../../constants.scss';
+
+.task-navigation-container {
+  width: 100%;
+  height: 60px;
+  padding: 0 8px;
+}
+.appen-logo {
+  margin-top: 18px;
+  float: left;
+  opacity: 0.6;
+}
+.appen-title {
+  @include themify() {
+    color: theme(default-font-color);
+    font-size: theme(title-font-size);
+  }
+  width: 0px;
+  overflow: visible;
+  white-space: nowrap;
+  margin-left: 8px;
+  margin-top: 17px;
+  float: left;
+  .version {
+    font-size: 12px;
+    padding-left: 6px;
+  }
+}
+.task-navigation-button-list {
+  float: right;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.clear-all-button, .fullscreen-button, .save-button, .guider-button {
+  height: 30px;
+  outline: none;
+  opacity: 0.6;
+  font-size: 24px;
+  cursor: pointer;
+  &:hover{
+    opacity: 1;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}

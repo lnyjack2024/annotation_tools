@@ -1,0 +1,15 @@
+# dependencies
+node_modules
+
+# build
+build
+dist
+lib
+es
+
+# config
+config-overrides.js
+.eslintrc.js
+
+# test
+src/test

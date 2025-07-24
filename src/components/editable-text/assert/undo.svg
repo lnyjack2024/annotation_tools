@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/undo</title>
+    <g id="icon/undo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M8,12.25 L3,8.5 L8,4.75 L8,8 L14,8 C17.0375661,8 19.5,10.4624339 19.5,13.5 C19.5,16.4634791 17.15622,18.8795391 14.2212071,18.9956328 L14,19 L11,19 L11,18 L14,18 C16.4852814,18 18.5,15.9852814 18.5,13.5 C18.5,11.0857267 16.5987635,9.11551091 14.2118357,9.00489799 L14,9 L8,9 L8,12.25 Z" id="Combined-Shape" fill="#C9CBCC"></path>
+    </g>
+</svg>

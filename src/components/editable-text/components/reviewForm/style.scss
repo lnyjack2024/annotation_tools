@@ -1,0 +1,180 @@
+.review-wrapper {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, .1);
+}
+
+.review-wrapper-display {
+  display: block;
+}
+
+.review-form {
+  width: 420px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  transform: translate(-50%, -50%);
+  background-color: #363C4C;
+  box-shadow: 0px 0px 8px 0px rgba(66, 82, 110, 0.25);
+  border: 1px solid #5C5F6B;
+  color: rgba(255, 255, 255, 0.6);
+  user-select: none;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+
+  &-title {
+    background-color: #4C5366;
+    color: #FFFFFF;
+    padding: 4px 16px;
+  }
+
+  &-content {
+    flex: 1;
+    padding: 12px;
+
+    .review-info {
+      color: rgba(255, 255, 255, .6);
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .review-result {
+      display: flex;
+      margin: 0 0 12px 0;
+
+      &>div {
+        padding: 4px 36px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        margin-right: 4px;
+        border-radius: 4px;
+
+        &:last-child {
+          margin-right: 0px;
+        }
+
+        &.pass {
+          color: #FFFFFF;
+        }
+
+        &.pass {
+          &:hover {
+            border-color: #5E8D36;
+          }
+
+          &.active {
+            background-color: rgba(94, 141, 54, 0.6);
+          }
+        }
+
+        &.reject {
+          &:hover {
+            border-color: #DC4624;
+          }
+
+          &.active {
+            background-color: rgba(220, 70, 36, 0.6);
+          }
+        }
+
+        &.suspend {
+          &:hover {
+            border-color: #E7C300;
+          }
+
+          &.active {
+            background-color: rgba(231, 195, 0, 0.6);
+          }
+        }
+      }
+    }
+    .review_content_readonly {
+      color: rgba(255, 255, 255, .9);
+      overflow-wrap: break-word;
+      max-width: 100%;
+      font-size: 14px;
+      margin-bottom: 10px;
+      .title {
+        color: rgba(255, 255, 255, .6);
+        font-size: 12px;
+        margin-bottom: 6px;
+      }
+      .content {
+        padding-left: 4px;
+      }
+    }
+    .review-checkbox {
+      span {
+        color: white !important;
+      }
+    }
+
+    textarea.ant-input {
+      background-color: #212633;
+      border: 1px solid rgba(255, 255, 255, .2);
+      color: rgba(255, 255, 255, .9);
+      &:placeholder-shown {
+        color: rgba(255, 255, 255, .7);
+      }
+    }
+
+    .ant-form-item {
+      margin-bottom: 12px;
+    }
+
+    .ant-form-item-label>label {
+      height: 24px;
+      color: rgba(255, 255, 255, .9);
+    }
+
+    .ant-form-item-control>.ant-form-item-control-input {
+      min-height: 24px;
+    }
+    .ant-select-status-error.ant-select:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer) .ant-select-selector{
+      border-color: #ff4d4f !important;
+      background-color: transparent;
+    }
+
+    .ant-select .ant-select-selector {
+      border-color: rgba(255, 255, 255, 0.2);
+      background-color: transparent;
+    }
+
+    .ant-select-multiple {
+      .ant-select-selection-item {
+        color: rgba(255, 255, 255, 0.85);
+        position: relative;
+        display: flex;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid #363C4C;
+        border-radius: 2px;
+        cursor: default;
+        max-width: 100%;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        &-remove {
+          color: rgba(255, 255, 255, 0.45);
+        }
+      }
+    }
+  }
+
+  &-footer {
+    padding: 0 12px 12px;
+    text-align: right;
+
+    .review-form-btn {
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+}

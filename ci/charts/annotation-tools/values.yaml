@@ -1,0 +1,55 @@
+# Default values for charts.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: registry-intl-vpc.cn-zhangjiakou.aliyuncs.com/loonshots/annotation-tools
+  pullPolicy: Always
+  tag: latest
+
+imagePullSecrets: [name: ali-docker-reg]
+nameOverride: ""
+namespace: "loonshots-dev"
+
+
+
+resources:
+  requests:
+    cpu: 500m
+    memory: 512Mi
+
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+env_var:
+  - name: LANG
+    value: en_US.UTF-8
+
+strategy:
+  rollingUpdate:
+    maxSurge: 25%
+    maxUnavailable: 25%
+  type: RollingUpdate
+
+
+environment: dev
+
+
+
+service_ports:
+  - name: port
+    nodePort: 30003
+    port: 3000
+    protocol: TCP
+    targetPort: 3000
+
+ports:
+  - containerPort: 3000
+    name: port
+    protocol: TCP

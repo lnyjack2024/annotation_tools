@@ -1,0 +1,123 @@
+.landmark-annotation-app .toolbar {
+  height: 36px;
+  border-bottom: 2px solid #161b25;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .mode-box {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .mode-button {
+      display: flex;
+      align-items: center;
+      height: 24px;
+      border-radius: 2px;
+      border: 1px solid #5C5F6B;
+      .icon-button {
+        height: 100%;
+        padding: 0 12px;
+        &:hover:not(.icon-button--disabled),
+        &--active {
+          color: #ffffff;
+          background: #5C5F6B;
+        }
+      }
+    }
+    .mode-tip {
+      font-size: 12px;
+      font-weight: 400;
+      color: #9FA1A7;
+      .mode-tip-icon {
+        padding: 0 4px 0 11px;
+      }
+    }
+  }
+
+  .divider {
+    width: 2px;
+    height: 100%;
+    background-color: #161b25;
+    margin: 0 8px;
+  }
+
+  .slider-container {
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+
+    & > span {
+      font-size: 12px;
+      font-weight: 500;
+      padding-right: 8px;
+    }
+
+    .landmark-slider {
+      width: 160px;
+    }
+  }
+
+  .icon-button {
+    padding: 0 8px;
+    font-size: 18px;
+
+    &:hover:not(.icon-button--disabled) {
+      cursor: pointer;
+      color: #5cdef0;
+    }
+
+    &--disabled {
+      color: #bdbdbd;
+
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+
+    &--active {
+      color: #00cce8;
+    }
+  }
+}
+
+.landmark-popover {
+  .help-buttons {
+    text-align: right;
+  }
+  .help-button {
+    display: inline-block;
+    border: 1px solid #bdbdbd;
+    border-radius: 4px;
+    padding: 0 4px;
+    margin: 2px;
+    min-width: 40px;
+    text-align: center;
+    font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
+    font-size: 12px;
+  }
+  .ant-popover-content {
+    border: 1px solid #666666;
+  }
+  .mode-tips {
+    font-size: 12px;
+    color: #FFFFFF;
+    line-height: 22px;
+    width: 320px;
+    .title {
+      margin-bottom: 5px;
+    }
+    p {
+      min-height: 22px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 0;
+    }
+  }
+}

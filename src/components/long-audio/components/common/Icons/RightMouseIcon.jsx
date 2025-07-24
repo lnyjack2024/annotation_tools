@@ -1,0 +1,10 @@
+import React from 'react';
+import SVGIcon from './SVGIcon';
+
+const RightMouseIcon = ((props) => (
+  <SVGIcon viewBox="0 0 32 32" {...props}>
+    <path d="M12,0 C18.627417,0 24,5.372583 24,12 L24,20 C24,26.627417 18.627417,32 12,32 C5.372583,32 0,26.627417 0,20 L0,12 C0,5.372583 5.372583,0 12,0 Z M1,17 L1,20 C1,26.0751322 5.92486775,31 12,31 C17.9787016,31 22.8433652,26.2302364 22.9962926,20.2884075 L23,20 L23,17 L1,17 Z M1,16 L23,16 L23,12 C23,5.92486775 18.0751322,1 12,1 C6.02129842,1 1.15663482,5.76976358 1.0037074,11.7115925 L1,12 L1,16 Z" fillOpacity="0.6" fill="#FFFFFF" fillRule="nonzero"></path>
+    <path d="M12,0 C18.627417,-1.21743675e-15 24,5.372583 24,12 L24,16 L24,16 L12,16 L12,0 Z" fillOpacity="0.27857299" fill="#FFFFFF"></path>
+  </SVGIcon>
+));
+export default RightMouseIcon;

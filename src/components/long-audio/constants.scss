@@ -1,0 +1,66 @@
+@import '~antd/dist/antd.css';
+
+$transparent-black: #00000066;
+$transparent-white-2: #FFFFFF20;
+$transparent-white-3: #FFFFFF10;
+$transparent-white-4: #FFFFFF30;
+$transparent-white: #FFFFFF99;
+$dark-gray: #2D2A34FF;
+$default-gray: #393644FF;
+$light-gray: #B5B3BCFF;
+$default-white: #FFFFFFFF;
+$default-whitesmoke: #D8D8D8FF;
+$min-width: 1500px;
+$default-margin: 12px;
+$audio-height: 270px;
+$video-height: 317px;
+
+$themes: (
+  dark-theme: (
+    default-font-color: rgba(255, 255, 255, 0.6),
+    ghost-border-color: $transparent-white,
+    highlight-font-color: $default-white,
+    default-border-color: rgba(255, 255, 255, 0.24),
+    body-background-color: $dark-gray,
+    guider-background-color: $dark-gray,
+    task-navigation-background-color: $dark-gray,
+    task-select-background-color: $transparent-black,
+    audio-background-color: $default-gray,
+    video-background-color: $default-gray,
+    segment-navigation-background-color: $default-gray,
+    segment-abstract-background-color: $default-gray,
+    segment-detail-background-color: $default-gray,
+    title-font-size: 16px,
+    default-font-size: 14px,
+    default-font-family: Helvetica,
+    default-margin: $default-margin,
+    radio-button-background-color: $default-gray,
+    radio-button-checked-background-color: $dark-gray,
+    segment-navigation-item-background-color: $transparent-white-2,
+    segment-navigation-item-title-color: $transparent-black,
+    default-tag-background-color: $transparent-white-2,
+    highlight-border-color: rgba(255, 255, 255, 0.6),
+    input-background-color: $dark-gray,
+    default-button-background-color: $transparent-white-2,
+    line-detail-background-color: $transparent-white-3,
+    icon-background-color: $transparent-white-3,
+
+    scrollbar-track-color: $dark-gray,
+    scrollbar-thumb-color: $transparent-white-4,
+    scrollbar-thumb-color-hover: $transparent-white-2,
+  )
+);
+
+$current-theme: null !default;
+$default-theme: 'dark-theme';
+@mixin themify($themes: $themes) {
+  @each $theme, $map in $themes {
+    $current-theme: map-get($themes, $theme) !global;
+    @if $theme == $default-theme { @content; }
+    @else { .#{$theme} & { @content; }}
+    $current-theme: null !global;
+  }
+}
+@function theme($query, $theme: $current-theme) {
+  @return map-get($theme, $query);
+}

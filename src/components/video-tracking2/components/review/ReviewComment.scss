@@ -1,0 +1,31 @@
+.video-tracking-app .review-comment {
+  position: absolute;
+  background-color: #252935;
+  box-shadow: 0px 0px 8px 0px rgba(66, 82, 110, 0.25);
+  border: 1px solid #5C5F6B;
+  color: rgba(255, 255, 255, 0.6);
+  z-index: 10000;
+  user-select: none;
+
+  &-title {
+    background-color: #5C5F6B;
+    color: #FFFFFF;
+    padding: 1px 8px;
+  }
+
+  &-content {
+    padding: 8px;
+
+    .img-container {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+
+      img {
+        max-height: 80px;
+      }
+    }
+  }
+}

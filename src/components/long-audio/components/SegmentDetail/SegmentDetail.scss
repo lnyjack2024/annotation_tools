@@ -1,0 +1,135 @@
+@import '../../constants.scss';
+@import '../VideoComp/VideoComp';
+@import '../../resetEasyform.scss';
+
+.segment-detail-container{
+  @include themify() {
+    background-color: theme(segment-detail-background-color);
+    margin: theme(default-margin);
+  }
+  width: calc(37% + #{- $default-margin});
+  float: left;
+  margin-right: 0px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: calc(100% - #{$audio-height} - 24px);
+
+  & .ant-radio-button-wrapper{
+    @include themify() {
+      border: 1px solid theme(default-border-color);
+      color: theme(default-font-color);
+    }
+    &::before{
+      display: none ;
+    }
+    &:hover{
+      @include themify() {
+        border-color: theme(highlight-border-color);
+        color: theme(highlight-font-color);
+      }
+    }
+    background-color: transparent;
+    text-align: center;
+    white-space: nowrap;
+    margin-bottom: 8px;
+    overflow: hidden;
+    width: fit-content;
+  }
+  & .ant-radio-button-wrapper-disabled{
+    border-style: dashed;
+    &:hover{
+      @include themify() {
+        border: 1px dashed theme(default-border-color);
+        color: theme(default-font-color);
+      }
+    }
+    &.ant-radio-button-wrapper-checked {
+      @include themify() {
+        background-color: theme(default-button-background-color);
+      }
+    }
+  }
+  .ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled){
+    @include themify() {
+      background-color: theme(default-button-background-color);
+      border-color: theme(highlight-border-color);
+    }
+    opacity: 1;
+    border: 1px solid ;
+  }
+}
+
+.segment-detail-head{
+  @include themify() {
+    color: theme(default-font-color);
+  }
+  background-color: transparent;
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid #504D66;
+  .segment-detail-index{
+    @include themify() {
+      color: theme(highlight-font-color);
+    }
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    float: left;
+    width: fit-content;
+    margin-left: 12px;
+  }
+  .segment-detail-timestamp{
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    margin-left: 15px;
+  }
+}
+
+.segment-detail-change{
+  width: 90px;
+  @include themify() {
+    background-color: theme(default-button-background-color);
+    color: theme(highlight-font-color);
+  }
+  height: 32px;
+  float:right;
+  margin: 9px 8px;
+  border-radius: 4px;
+  opacity: 0.6;
+  span{
+    display: inline-block;
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+  &:hover{
+    opacity: 1;
+  }
+  &:focus{
+    opacity: 1;
+  }
+}
+
+.segment-push-line{
+  @include themify() {
+    background-color: theme(default-button-background-color);
+    color: theme(default-font-color);
+  }
+  border-radius: 4px;
+  width: calc(100% - 20px);
+  margin: 0px 14px 14px 10px;
+  height: 40px;
+  line-height: 40px;
+}
+.add-role-icon{
+  font-size: 30px;
+  float: left;
+  margin-left: 10px;
+  height: 35px;
+  line-height: 33px;
+  width: 10px;
+}
+
+.segment-detail-body {
+  padding: 10px;
+}

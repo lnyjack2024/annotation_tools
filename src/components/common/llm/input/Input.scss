@@ -1,0 +1,118 @@
+.llm-input-container {
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  position: relative;
+
+  .llm-input-tools {
+    font-size: 24px;
+    color: #4C5366;
+    height: 40px;
+    padding: 8px 12px;
+    border-bottom: 1px solid #CFD5E5;
+    display: flex;
+    justify-content: space-between;
+
+    & > div {
+      display: flex;
+      align-items: center;
+
+      &:first-child {
+        flex: 1;
+      }
+    }
+
+    .llm-input-tools-btn {
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      margin: 0 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &.active {
+        color: #4A90E2;
+      }
+    }
+
+    .divider {
+      width: 1px;
+      height: 24px;
+      background-color: #B3BACC;
+      margin: 0 8px;
+    }
+  }
+
+  .llm-input {
+    height: calc(100% - 40px);
+    overflow: auto;
+
+    .DraftEditor-root {
+      padding: 12px;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    &-markdown {
+      display: flex;
+
+      & > div {
+        width: 50%;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+
+        &:first-child {
+          border-right: 1px solid #CED5E5;
+        }
+      }
+
+      &__title {
+        color: #666D80;
+        margin-bottom: 8px;
+      }
+
+      &__input {
+        resize: none;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        height: 100%;
+        background-color: #F5F7FF;
+      }
+    }
+  }
+
+  &.screen-full {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+.llm-modal-confirm.ant-modal-confirm {
+  .ant-modal-content {
+    border-radius: 4px;
+  }
+  .ant-modal-body {
+    padding: 0;
+  }
+  .ant-modal-confirm-btns {
+    margin: 0;
+    padding: 12px;
+  }
+  .ant-modal-confirm-body .ant-modal-confirm-title {
+    font-size: 14px;
+    padding: 8px 12px;
+    background-color: #E4E7F2;
+    border-radius: 4px 4px 0 0;
+  }
+  .ant-modal-confirm-body .ant-modal-confirm-content {
+    margin: 0;
+    padding: 16px;
+  }
+}

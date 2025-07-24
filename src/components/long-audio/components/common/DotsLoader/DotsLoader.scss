@@ -1,0 +1,37 @@
+/*
+License: Proprietary
+Copyright (c) 2018, Figure Eight Technologies, Inc.
+All rights reserved - Do Not Redistribute
+*/
+
+.b-DotsLoader {
+
+  &--dot {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+    margin-right: 10px;
+    opacity: 0;
+    background-color: #00e5d6;
+  }
+
+  &--load3 {
+    &-dot1 {
+      animation: b-DotsLoader--animationLoading 1s 0s ease-in infinite;
+    }
+    &-dot2 {
+      animation: b-DotsLoader--animationLoading 1s 0.23s ease-in infinite;
+    }
+    &-dot3 {
+      animation: b-DotsLoader--animationLoading 1s 0.46s ease-in infinite;
+      margin-right:0;
+    }
+  }
+
+  @keyframes b-DotsLoader--animationLoading {
+    0% {opacity: 1;}
+    50% {opacity: 0.6;}
+    90% {opacity: 0;}
+  }
+}

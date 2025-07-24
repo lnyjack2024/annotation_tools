@@ -1,0 +1,1 @@
+ docker build  -t annotation-tools:latest -f ci/Dockerfile .

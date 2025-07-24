@@ -1,0 +1,96 @@
+.landmark-annotation-app .sidebar {
+  width: 288px;
+  height: 100%;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background:#27253c;
+  }
+  &::-webkit-scrollbar-thumb {
+    background:#686d79;
+  }
+
+  .pointCategory {
+    margin: 8px 6px 0;
+
+    .name {
+      font-size: 12px;
+      font-weight: 400;
+      color: #FFFFFF;
+      line-height: 17px;
+    }
+
+    .points-container {
+      display: grid;
+      grid-template-columns: repeat(9, calc(11% - 3px));
+      column-gap: 4px;
+      row-gap: 4px;
+      padding: 8px 0;
+    }
+
+    .point-box {
+      border: 1px solid transparent;
+      &.reject {
+        border-color: #DC4624;
+      }
+      &.suspend {
+        border-color: #E7C300;
+      }
+      &.approve {
+        border-color: #1CA85E;
+      }
+    }
+
+    .point {
+      height: 24px;
+      display: flex;
+      font-size: 12px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #686d79;
+      background-color: #686d79;
+      border-radius: 50%;
+      transition: all 0.2s;
+
+      &--key {
+        color: #8F6753;
+        border-color: #96654F;
+        background-color: #96654F;
+
+        &:not(.point--empty) {
+          color: #ffffff;
+        }
+      }
+
+      &--empty {
+        background-color: transparent;
+      }
+
+      &--selected {
+        border-width: 2px;
+        border-color: #4A90E2;
+      }
+
+      &--invisible {
+        background: linear-gradient(135deg, #686d79 50%,  transparent 50%, transparent 100%);
+
+        &.point--key {
+          background-image: linear-gradient(135deg, #96654F 50%, transparent 50%, transparent 100%);
+        }
+      }
+
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+
+      &.point--disabeld {
+        cursor: not-allowed;
+      }
+    }
+  }
+}

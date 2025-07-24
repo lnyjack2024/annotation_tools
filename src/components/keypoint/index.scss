@@ -1,0 +1,74 @@
+@import '~antd/dist/antd.css';
+
+.landmark-annotation-app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #3d424d;
+  color: #ffffff;
+
+  & > .container {
+    position: relative;
+    display: flex;
+    height: calc(100% - 36px);
+  }
+
+  .panel {
+    background-color: #3D424D;
+    border-radius: 2px;
+    box-shadow: 0px 0px 8px 0px rgba(66, 82, 110, 0.25);
+    z-index: 9999;
+    cursor: default;
+    pointer-events: auto;
+  }
+
+  .arributes-panel {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+  }
+}
+
+.landmark-slider.ant-slider {
+  .ant-slider-track {
+    background-color: #00bad3;
+  }
+  .ant-slider-handle {
+    background-color: #00bad3;
+    border-color: #00bad3;
+  }
+
+  &.ant-slider-disabled {
+    .ant-slider-track {
+      background-color: #00bad3;
+    }
+  }
+}
+
+.landmark-popover {
+  &.ant-popover.ant-popover-placement-bottomRight,
+  &.ant-popover.ant-popover-placement-bottomLeft {
+    & > .ant-popover-content {
+      & > .ant-popover-arrow {
+        right: 6px;
+        border-color: #3d424d;
+      }
+      & > .ant-popover-inner > .ant-popover-inner-content {
+        background-color: #3d424d;
+        color: #f5f5f5;
+      }
+    }
+  }
+
+  .ant-divider-horizontal.ant-divider-with-text::before,
+  .ant-divider-horizontal.ant-divider-with-text::after {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  .ant-divider-plain.ant-divider-with-text {
+    color: #ffffff;
+  }
+}
+
+.ant-select-dropdown, .easyform-select-dropdown {
+  z-index: 10010 !important;
+}

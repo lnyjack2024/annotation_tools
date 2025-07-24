@@ -1,0 +1,297 @@
+@import '~antd/dist/antd.min.css';
+
+@media screen and (max-width: 1340px) {
+  #root {
+    height: 100% !important;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1341px) {
+  #root {
+    width: 1340px;
+    height: 100% !important;
+    margin: auto;
+  }
+}
+/* canvas.css ------------------------------------------ */
+
+.annotation-canvas-container{
+  width: 100%;
+  //height: 450px;
+  overflow: visible;
+  position: relative;
+  //float: left;
+  min-width: 800px;
+  min-height: 450px;
+  //max-width: 1340px;
+  video {
+    // width: 100%;
+    height: calc(100% - 30px);
+    object-fit: cover;
+    display: block;
+    object-fit:fill;
+    // vertical-align: top;
+  }
+}
+.annotation-canvas-wrapper {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+.annotation-canvas{
+  //width: 800px;
+  //height: 450px;
+  //width: 100%;
+  //height: calc(100% - 30px);
+  position: absolute;
+  z-index: 3;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select:none;
+  rect {
+    transition: all 0.01s;
+  }
+}
+.annotation-video-controll-bar{
+  background: white;
+  height: 30px;
+  padding: 0 30px 0 15px;
+  display: flex;
+}
+.annotation-canvas-resizer {
+  opacity: 0;
+  display: inline-block;
+  position: absolute;
+  z-index: 99;
+  background: #ddd;
+  &.resize-left {
+    right: 0;
+    height: calc(100% - 5px);
+    width: 5px;
+    cursor:e-resize;
+  }
+  &.resize-bottom {
+    bottom: 0;
+    left:0;
+    margin-top:-5px;
+    height: 5px;
+    width: calc(100% - 5px);
+    cursor: n-resize;
+    vertical-align: top;
+  }
+  &.resize-corner {
+    vertical-align: top;
+    margin-top:-5px;
+    height: 5px;
+    width: 5px;
+    bottom:0;
+    right: 0;
+    cursor:nwse-resize;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+/* form.css ------------------------------------------ */
+.annotation-form-wrapper {
+  width: 100%;
+  flex:2;
+  background: aliceblue;
+  > .annotation-form-card{
+    height: 186px;
+    width: 96%;
+    margin: 2%;
+    position: static !important;
+  }
+}
+
+.annotation-form-container{
+  height: calc(100% - 186px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-bottom: 50px;
+}
+.annotation-form-container .annotation-form-card{
+  width: 96%;
+  margin: 2%;
+  position: static !important;
+}
+.annotation-form-container .video-currentTime{
+  text-align: center;
+  margin-bottom: 10px;
+}
+.video-playBackRate{
+  width: 100%;
+}
+.video-playBackRate label{
+  width: 20%;
+  height: 40px;
+  padding: 5px;
+  text-align: center;
+}
+.advertisement-attribute-label{
+  display: block;
+  float: left;
+  width: 30%;
+  height: 40px;
+  padding: 5px;
+  padding-right: 20px;
+}
+.annotation-form-container .advertisement-attribute-select{
+  width: 70%;
+  margin-bottom: 10px;
+}
+.annotation-form-container .advertisement-timestamp-reset{
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  padding: 0 5px 0 5px;
+  float: right;
+}
+.annotation-form-button-right{
+  float: right;
+  margin-top:5px;
+}
+.annotation-form-button-float{
+  z-index: 3;
+  margin-bottom: 5px;
+}
+.annotation-form-button{
+  display: block;
+  margin: auto;
+  margin-top: 8px;
+  width: 100%;
+}
+.advertisement-timestamp{
+  border: lightgray 1px solid;
+  border-radius: 5px;
+  padding-left: 10px;
+  height: 30px;
+  width: 50%;
+  margin-bottom: 10px;
+}
+.advertisement-timestamp:focus{
+  border-color: #40a9ff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+.advertisement-attribute-wrapper{
+  width: 100%;
+}
+.advertisement-index{
+  float: left;
+  margin-top: 10px;
+}
+.advertisement-color-tag{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.annotation-form-buttons-float{
+  width: 55px;
+  z-index: 3;
+  padding-top: 5px;
+  padding-left: 5px;
+  border-radius: 4px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* index.css ------------------------------------------ */
+html, body{
+  padding: 0;
+  margin: 0;
+  height: 100% !important;
+  width: 100%;
+  overflow: hidden;
+}
+.advertisement-annotation-app-topbar{
+  width: 100%;
+  height: 50px;
+  background: #3D424D;
+  line-height: 50px;
+  font-size: 22px;
+  padding: 0 10px;
+  margin-bottom: 5px;
+  color:white;
+}
+
+.advertisement-annotation-app-topbar-btn{
+  float: right;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.advertisement-annotation-app-container{
+  //margin-left: calc(50% - 600px);
+  //padding-top: 10px;
+  height: calc(100% - 50px);
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.paint-mode-mask{
+  height: 100%;
+  width: 100%;
+  //width: 1200px;
+  //height: 800px;
+  position: absolute;
+  z-index: 2;
+  background: black;
+  opacity: 0.1;
+}
+.vertical-wrapper{
+  //height: 600px;
+  //float: left;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+#ads{
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+}
+/* results.css ------------------------------------------ */
+.annotation-results-container{
+  width: 100%;
+  //height: 350px;
+  // float: left;
+  background: aliceblue;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.annotation-results-row-focus{
+  background-color: whitesmoke;
+}
+.annotation-results-row-fail{
+  color: red;
+}
+.annotation-results-container .annotation-results-index{
+  border-radius: 999px;
+}
+.annotation-results-container .ant-tag{
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select:none;
+}
+
+
+/* qa------------------------------------------ */
+.annotation-results-container .qa-reason-select{
+  float: right;
+  margin-left: 10px;
+  width: 40%;
+}
+.annotation-results-container .qa-state-radio{
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.annotation-results-container .qa-comment-textarea{
+  resize: none;
+  margin-bottom: 10px;
+}

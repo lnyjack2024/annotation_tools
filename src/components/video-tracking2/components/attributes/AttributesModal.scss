@@ -1,0 +1,114 @@
+.video-tracking-app .attributes-form {
+  width: 720px;
+
+  &-content {
+    position: relative;
+
+    .easyform-form > div:last-child {
+      display: none;
+    }
+  }
+
+  &-section {
+    border-top: 1px solid #32353F;
+    padding-top: 12px;
+
+    &:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    &__title {
+      padding-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__item {
+      padding-top: 12px;
+
+      &:first-child {
+        border-top: none;
+        padding-top: 0;
+      }
+    }
+  }
+
+  &-btn {
+    height: 32px;
+    padding: 5px 8px;
+    background-color: #343846;
+    border-radius: 2px;
+    color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &.disabled {
+      cursor: not-allowed;
+      color: rgba(255, 255, 255, 0.2);
+    }
+    &.active {
+      color: #5CDEF0;
+    }
+  }
+
+  .ocr-snapshot {
+    background-position-x: left;
+  }
+
+  .ocr-text-field .easyform-form-item-label > label {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .ocr-tag-group {
+    padding: 0 0 20px 0;
+  }
+
+  .ocr-tag-group-tag {
+    display: inline-block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 2px 8px;
+    margin: 3px 4px 3px 0;
+    border-radius: 2px;
+    cursor: pointer;
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+
+    &-standalone {
+      background-color: rgba(113, 197, 20, 0.6);
+      &:active {
+        background-color: rgba(113, 197, 20, 0.4);
+      }
+    }
+
+    &-tag {
+      background-color: rgba(2, 122, 255, 0.6);
+      &:active {
+        background-color: rgba(2, 122, 255, 0.4);
+      }
+    }
+  }
+
+  .ocr-tag-group-icon {
+    padding: 7px 5px 0 0;
+    float: left;
+    opacity: 0.6;
+  }
+
+  .attributes-form-footer {
+    display: flex;
+    align-items: center;
+    .form-footer-operation {
+      margin-left: 15px;
+    }
+  }
+
+  .ant-form-item-label > label {
+    display: block;
+  }
+}

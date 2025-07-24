@@ -1,0 +1,60 @@
+@import '../../constants.scss';
+
+.global-attributes-container {
+  @include themify() {
+    background-color: theme(video-background-color);
+  }
+  margin: 12px 12px 0 12px;
+  padding: 12px;
+
+  .header {
+    font-size: 16px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .edit-btn {
+      width: 90px;
+      height: 28px;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      user-select: none;
+      font-size: 14px;
+    }
+  }
+
+  .content {
+    margin-top: 8px;
+    color: rgba(255, 255, 255, 0.6);
+
+    .easyform-form {
+      margin-top: 20px;
+
+      .easyform-form-item {
+        margin-bottom: 20px;
+      }
+
+      .easyform-form-item-label {
+        padding-bottom: 0;
+
+        & > label {
+          color: rgba(255, 255, 255, 0.6);
+        }
+      }
+
+      .easyform-form-item-explain {
+        font-size: 12px;
+        min-height: auto;
+      }
+
+      & > div:last-child {
+        display: none;
+      }
+    }
+  }
+}

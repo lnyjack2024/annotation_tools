@@ -1,0 +1,41 @@
+@import '../../../constants.scss';
+
+.play-setting-container{
+  @include themify() {
+    color: theme(default-font-color);
+  }
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  float: right;
+  background: transparent;
+  .play-setting {
+    margin: 0px 10px;
+    border: solid 1px;
+    border-radius: 4px;
+    box-shadow: none;
+    padding-left: 10px;
+    @include themify() {
+      background-color: theme(input-background-color);
+      color: theme(default-font-color);
+      border: theme(default-border-color);
+    }
+    .ant-input-number-handler-wrap {
+      border: none;
+      background-color: transparent;
+    }
+    .ant-input-number-handler{
+      @include themify() {
+        background-color: #FFFFFF10;
+        color: theme(default-font-color);
+        border: none;
+      }
+      &:hover{
+        background-color: #FFFFFF10;
+      }
+    }
+    & input {
+      // pointer-events: none;
+    }
+  }
+}

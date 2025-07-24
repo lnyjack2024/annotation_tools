@@ -1,0 +1,58 @@
+@import '../../../constants.scss';
+
+.play-setting-segment-container {
+  @include themify() {
+    color: theme(default-font-color);
+  }
+
+  position: absolute;
+  top: 0;
+  left: 320px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  user-select: none;
+
+  & > span {
+    margin: 0 4px;
+  }
+
+  .play-setting-segment-time {
+    width: 108px;
+    border: solid 1px;
+    border-radius: 4px;
+    @include themify() {
+      background-color: theme(input-background-color);
+      border: theme(default-border-color);
+    }
+
+    .ant-input {
+      box-shadow: none;
+      background-color: transparent;
+      border-color: transparent;
+      @include themify() {
+        color: theme(default-font-color);
+      }
+    }
+
+    .ant-input-group-addon {
+      @include themify() {
+        background-color: theme(default-button-background-color);
+        color: theme(default-font-color);
+      }
+      padding: 0;
+      border: 0;
+      width: 20px;
+      font-size: 7px;
+
+      & > div {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 14px;
+      }
+    }
+  }
+}

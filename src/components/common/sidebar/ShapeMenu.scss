@@ -1,0 +1,32 @@
+.shape-menu {
+  position: fixed;
+  z-index: 1000;
+  background-color: #252935;
+  border: 1px solid #636770;
+  box-shadow: 0px 0px 8px 0px rgba(66, 82, 110, 0.25);
+  border-radius: 2px;
+  padding: 4px 0;
+  width: 240px;
+  user-select: none;
+
+  .shape-menu-item {
+    padding: 4px 12px;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+
+    &:hover:not(.disabled) {
+      background-color: #1A1D22;
+    }
+
+    &.disabled {
+      color: rgba(255, 255, 255, 0.2);
+      cursor: not-allowed;
+    }
+  }
+
+  .divider {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 4px 0;
+  }
+}

@@ -1,0 +1,24 @@
+@import '../../constants.scss';
+@import '../VideoComp/VideoComp';
+
+.segment-abstract-container{
+  @include themify() {
+    background-color: theme(segment-navigation-background-color);
+    margin: theme(default-margin);
+  }
+  flex: 1;
+}
+
+.segment-abstract-row {
+  padding-left: 40px;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: calc(100% - 45px);
+    background: rgba(255,255,255,0.1);
+    bottom: 0;
+    left: 40px;
+  }
+}

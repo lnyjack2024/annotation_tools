@@ -1,0 +1,56 @@
+.landmark-annotation-app .canvas {
+  height: 100%;
+  width: calc(100vw - 286px);
+  background-color: #161b25;
+  position: relative;
+
+  .layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    border: 2px solid #4A90E2;
+    pointer-events: none;
+    .tip {
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #4A90E2;
+      color: #ffffff;
+      padding: 4px 16px;
+      font-size: 12px;
+      line-height: 24px;
+      pointer-events: initial;
+      .close {
+        border: none;
+        &:hover,&:focus,&:active {
+          color: rgba(0, 0, 0, 0.85);
+        }
+      }
+    }
+  }
+
+  & > canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+}

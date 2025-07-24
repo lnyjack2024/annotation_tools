@@ -1,0 +1,116 @@
+@import '../../../constants.scss';
+
+$line-height: 35px;
+
+.segment-abstract-item-container {
+  border: 1px solid transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  .segment-abstract-item-color{
+    width: 6px;
+    float: left;
+    height: 100%;
+    background-color: purple;
+  }
+  @include themify() {
+    color: theme(default-font-color);
+  }
+}
+.segment-abstract-item-container-current{
+  border: 1px solid #FFFFFF;
+}
+.segment-abstract-item {
+  height: $line-height;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.segment-abstract-attributes {
+  display: flex;
+  flex-wrap: wrap;
+  p {
+    margin-bottom: 0;
+  }
+  &-item {
+    font-size: 14px;
+    margin-right: 7px;
+    padding: 2px 0 8px;
+    .text {
+      background-color: rgba(255, 255, 255, 0.1254901961);
+      line-height: 20px;
+      border-radius: 4px;
+      padding: 0px 5px;
+      margin-top: 7.5px;
+      word-break: break-all;
+      cursor: pointer;
+    }
+  }
+  & .segment-abstract-item-category-hw {
+    //height: 28px;
+    width: calc(100% - 80px);
+    margin: 5px 0 0 5px;
+    float: left;
+    @include themify() {
+      background-color: theme(input-background-color);
+      color: theme(default-font-color);
+    }
+    border: none;
+    outline: none;
+  }
+}
+.segment-abstract-item-timestamp {
+  margin-left: 15px;
+  line-height: $line-height;
+}
+.segment-abstract-item-index {
+  @include themify() {
+    color: theme(highlight-font-color);
+  }
+  width: 32px;
+  text-align: right;
+  font-size: 18px;
+  line-height: calc(#{$line-height} - 2px);
+}
+
+.segment-abstract-item-categories {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.segment-abstract-item-category {
+  flex: 1;
+  padding: 0 5px;
+  box-sizing: border-box;
+  line-height: $line-height;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.segment-abstract-item-qa-state {
+  width: 30px;
+  height: 35px;
+  padding: 8px;
+  float: left;
+  opacity: 0.4;
+}
+.segment-abstract-item-warning {
+  width: 30px;
+  height: 35px;
+  padding: 8px;
+  float: left;
+  opacity: 0.6;
+}
+.segment-abstract-qa-detail {
+  width: 300px;
+  min-height: 200px;
+  height: fit-content;
+  position: absolute;
+  background-color: #2D2A34FF;
+  border: #504D66FF 1px solid;
+  z-index: 2;
+  padding: 16px;
+  top: 0;
+  left: 0;
+}

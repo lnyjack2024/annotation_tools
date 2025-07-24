@@ -1,0 +1,59 @@
+# Default values for charts.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: registry-intl-vpc.cn-zhangjiakou.aliyuncs.com/loonshots/annotation-tools
+  pullPolicy: IfNotPresent
+  tag: latest
+
+imagePullSecrets: [name: registry-jdk]
+nameOverride: ""
+fullnameOverride: "api-gateway"
+namespace: "loonshots-stg"
+
+
+
+service:
+  type: ClusterIP
+  port: 8500
+
+resources:
+  requests:
+    cpu: 500m
+    memory: 512Mi
+
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+env_var:
+  - name: LANG
+    value: en_US.UTF-8
+
+strategy:
+  rollingUpdate:
+    maxSurge: 25%
+    maxUnavailable: 25%
+  type: RollingUpdate
+
+
+environment: stg
+
+
+service_ports:
+  - name: port
+    nodePort: 31003
+    port: 3000
+    protocol: TCP
+    targetPort: 3000
+
+ports:
+  - containerPort: 3000
+    name: port
+    protocol: TCP

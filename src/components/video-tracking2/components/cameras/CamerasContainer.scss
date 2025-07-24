@@ -1,0 +1,114 @@
+.canvas-container canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.cameras-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  user-select: none;
+  overflow: hidden;
+
+  .camera-view {
+    position: absolute;
+    overflow: hidden;
+
+    .outer-border {
+      border: 1px solid #000000;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .inner-border {
+      border: 1px solid #5C5F6B;
+      width: 100%;
+      height: 100%;
+    }
+
+    .error {
+      position: absolute;
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+      padding: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      word-break: break-all;
+      background-color: #000000;
+      pointer-events: auto;
+      user-select: text;
+    }
+
+    .name {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      color: #FFFFFF;
+      font-size: 12px;
+      padding: 2px 8px;
+      background-color: rgba(37, 41, 53, 0.4);
+      border-radius: 2px;
+    }
+
+    &.single {
+      .outer-border,
+      .inner-border {
+        border: none;
+      }
+    }
+  }
+
+  &.thumbnail-layout .camera-view {
+    &:not(.thumbnail):not(.selected) {
+      display: none;
+    }
+
+    &.thumbnail {
+      pointer-events: auto;
+    }
+  }
+
+  &:not(.thumbnail-layout) .camera-view.thumbnail {
+    display: none;
+  }
+
+  &:not(.thumbnail-layout) .camera-view.selected,
+  &.thumbnail-layout .camera-view.thumbnail.selected {
+    .name {
+      background-color: #4A90E2;
+    }
+    .outer-border,
+    .inner-border {
+      border-color: #4A90E2;
+    }
+  }
+}
+
+.cameras-scroller {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  width: 8px;
+  height: 100%;
+  pointer-events: auto;
+
+  &__thumb {
+    position: absolute;
+    width: 100%;
+    min-height: 24px;
+    border-radius: 4px;
+    background-color: #3D424D;
+  }
+
+  &.thumbnail-layout {
+    left: 192px;
+  }
+}

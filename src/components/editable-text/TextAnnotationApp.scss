@@ -1,0 +1,310 @@
+@import '~antd/dist/antd.css';
+
+$focus-color: #40a9ff;
+$base-color: #202020;
+$font-color: #fff;
+$tag-height: 18px;
+$half-tag-height: 9px;
+
+@import './components/toolBar/toolbar.scss';
+@import './components/tag/tag.scss';
+@import './components/reviewForm/style.scss';
+
+html, body {
+  height: 100% !important;
+  margin: 0px;
+  padding: 0px;
+  button {
+    outline: none;
+  }
+}
+#root {
+  height: 100%;
+}
+.app-wrapper{
+  height: 100%;
+  background: #202020;
+}
+
+.topbar-wrapper {
+  color: rgba(255, 255, 255, .7);
+  width: 100%;
+  background: #363C4D;
+  height: 36px;
+  border-bottom: 1px solid #272A36;
+  display: flex;
+  justify-content: space-between;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    margin: 0 8px;
+
+    &>svg>g {
+      fill-opacity: 1;
+    }
+  }
+
+  .divider {
+    width: 1px;
+    height: 100%;
+    background-color: #212633;
+  }
+
+  .icon-button {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 6px;
+    font-size: 24px;
+    // color: #99A0B2;
+    user-select: none;
+    cursor: pointer;
+    background: transparent;
+
+    &--disabled {
+      color: #666D80;
+
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+
+    &--active {
+      color: #5BA8FF;
+    }
+  }
+
+  .review-mode {
+    display: flex;
+    height: 100%;
+
+    &-button {
+      padding: 0 14px;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: relative;
+
+      &:hover {
+        background-color: #212633;
+      }
+    }
+
+    &-text {
+      font-size: 12px;
+      line-height: 1;
+      padding-left: 4px;
+    }
+
+    &-info {
+      position: absolute;
+      font-size: 12px;
+      top: 38px;
+      left: 0;
+      width: 296px;
+      padding: 12px;
+      z-index: 10001;
+      color: rgba(255, 255, 255, 0.6);
+      background: #212633;
+      box-shadow: 0px 0px 8px 0px rgba(66, 82, 110, 0.25);
+      border: 1px solid #666666;
+    }
+
+    &-popover {
+      position: absolute;
+      font-size: 12px;
+      top: 48px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 292px;
+      padding: 12px;
+      z-index: 10000;
+      background: #13151B;
+      box-shadow: 0px 0px 8px 0px rgba(66, 82, 110, 0.25);
+      border: 1px solid #666666;
+      color: rgba(255, 255, 255, 0.6);
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: #13151B;
+        box-shadow: 0px 0px 8px 0px rgba(66, 82, 110, 0.25);
+        border-left: 1px solid #666666;
+        border-top: 1px solid #666666;
+        top: -7px;
+        left: 50%;
+        transform: translate(-50%, 0) rotate(45deg);
+      }
+
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+        margin-bottom: 8px;
+        color: #FFFFFF;
+      }
+
+      .footer {
+        margin-top: 8px;
+        display: flex;
+        justify-content: flex-end;
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  .topbar-left-wrapper,
+  .topbar-right-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .topbar-right-wrapper {
+    padding-right: 18px;
+  }
+}
+
+.right-wrapper {
+  position: relative;
+  display: flex;
+  height: calc(100% - 36px);
+  width: calc(100% - 286px);
+  .editor-wrapper{
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 32px;
+    & .DraftEditor-root{
+      z-index: 0;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background:#686d79;
+    }
+  }
+}
+.svg-wrapper, .tags-wrapper{
+  width: 0;
+  height: 0;
+  overflow: visible;
+  & svg {
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+  }
+  & .tags-panel {
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+.save-button {
+  position: absolute;
+  left: calc(100% - 200px - 20px);
+  transform: translateX(-100%);
+  top: 5px;
+  z-index: 3;
+  border-radius: 10px;
+}
+
+
+.modal-root {
+  .modal.ant-modal-confirm {
+    background: transparent;
+
+    .ant-modal-content {
+      background-color: #363C4C;
+
+      .ant-modal-confirm-title,
+      .ant-modal-confirm-content {
+        color: #eee;
+      }
+
+      .ant-btn {
+        background: transparent;
+        color: #eee;
+
+        &:hover,
+        &:focus {
+          color: #ffffff;
+        }
+
+        &.ant-btn-dangerous {
+          background: #FF7875;
+          border-color: #FF7875;
+
+          &:hover,
+          &:focus {
+            color: #ffffff;
+            background: #CF5654;
+            border-color: #CF5654;
+          }
+        }
+      }
+    }
+  }
+}
+.ant-tooltip,
+.ant-message {
+  z-index: 10000;
+}
+
+.ant-tooltip,
+.ant-popover {
+  &-inner {
+    background-color: #4c5366;
+    color: rgb(255 255 255 / 90%);
+  }
+
+  &-arrow-content::before {
+    background: #4c5366;
+  }
+}
+
+.ant-select-dropdown {
+  color: rgba(255, 255, 255, 0.85);
+  background-color: #1f1f1f;
+  border-radius: 2px;
+  outline: none;
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.48), 0 6px 16px 0 rgba(0, 0, 0, 0.32), 0 9px 28px 8px rgba(0, 0, 0, 0.2);
+
+  .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 600;
+    background-color: #111b26;
+  }
+
+  .ant-select-item {
+    position: relative;
+    display: block;
+    min-height: 32px;
+    padding: 5px 12px;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    cursor: pointer;
+
+  }
+  .ant-select-item.ant-select-item-option {
+    display: flex;
+  }
+
+}
+

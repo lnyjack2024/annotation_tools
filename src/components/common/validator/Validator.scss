@@ -1,0 +1,132 @@
+.tool-validator {
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #363C4D;
+  transition: height 0.2s;
+
+  .icon-button {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .header {
+    position: absolute;
+    z-index: 1000;
+    bottom: 0;
+    width: 100%;
+    background-color: #363C4D;
+    border-top: 1px solid #212633;
+    user-select: none;
+
+    & > div {
+      display: flex;
+      justify-content: space-between;
+      height: 32px;
+      padding: 0 8px 0 12px;
+      transition: background-color 0.1s;
+
+      & > div {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .content {
+    height: calc(100% - 32px);
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background:#686d79;
+    }
+
+    .error {
+      padding: 12px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.6);
+      border-bottom: 1px solid #272A36;
+    }
+
+    .result-count {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .warning-item {
+      padding: 12px;
+      user-select: none;
+      transform: background-color 0.1s;
+      border-bottom: 1px solid #272A36;
+
+      &:hover {
+        background-color: rgba(220, 70, 36, 0.2);
+      }
+
+      .warning-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .name {
+          background-color: #272A36;
+          padding: 0 8px;
+          border-radius: 2px;
+          display: flex;
+          align-items: center;
+        }
+
+        .action {
+          width: 24px;
+          height: 24px;
+          border: 1px solid #555963;
+          border-radius: 2px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .warning-msg {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.6);
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .ant-collapse {
+    & > .ant-collapse-item {
+      & > .ant-collapse-header {
+        color: #FFFFFF;
+        background-color: #555963;
+        border-bottom: 1px solid #272A36;
+        padding: 6px 12px 6px 36px;
+        user-select: none;
+
+        .ant-collapse-arrow {
+          left: 12px;
+        }
+      }
+
+      & > .ant-collapse-content {
+        color: #FFFFFF;
+
+        & > .ant-collapse-content-box {
+          padding: 0px;
+        }
+      }
+    }
+  }
+}

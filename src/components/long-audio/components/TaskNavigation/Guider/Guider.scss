@@ -1,0 +1,72 @@
+@import "../../../constants";
+
+.guider-container{
+  border: 1px solid;
+  @include themify() {
+    background-color: theme(guider-background-color);
+    border-color: theme(default-border-color);
+    color: theme(default-font-color);
+  }
+  width: 400px;
+  height: calc(100% - 24px);
+  overflow-y: scroll;
+  position:absolute;
+  z-index: 7;
+  right: 10px;
+  top: 50px;
+  padding: 32px;
+
+  h2 {
+    font-size: 20px;
+    margin-top: 32px;
+    @include themify() {
+      color: theme(default-font-color);
+    }
+  }
+}
+
+.shortcut-item{
+  height: 32px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+.shortcut-description{
+  line-height: 16px;
+  float: left;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  margin-left: 15px;
+}
+
+.guider-quit{
+  float: right;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  opacity: 0.6;
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.shortcut-icon{
+  height: 32px;
+  min-width: 32px;
+  width: fit-content;
+  border: 1px solid;
+  @include themify() {
+    border-color: theme(default-border-color);
+    color: theme(default-font-color);
+  }
+  line-height: 32px;
+  padding: 0 5px;
+  border-radius: 4px;
+  text-align: center;
+  float: left;
+  white-space: pre;
+}

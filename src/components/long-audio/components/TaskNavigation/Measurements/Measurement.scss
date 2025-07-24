@@ -1,0 +1,43 @@
+@import "../../../constants";
+
+.audio-measurements-button {
+  border-left: 1px solid #1C1A22;
+  border-right: 1px solid #1C1A22;
+  padding: 0 12px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  line-height: 24px;
+  @include themify() {
+    color: theme(default-font-color);
+  }
+
+  .measurement-icon {
+    font-size: 24px;
+    &.active {
+      color: #34CBD1;
+    }
+  }
+  .measurement-time {
+    padding-left: 12px;
+    padding-right: 4px;
+  }
+
+  .dropdown-menu {
+    @include themify() {
+      background-color: theme(body-background-color);
+    }
+
+    .dropdown-menu-item{
+      @include themify() {
+        color: theme(default-font-color);
+      }
+      &:hover {
+        @include themify() {
+          color: theme(highlight-font-color);
+          background-color: theme(audio-background-color);
+        }
+      }
+    }
+  }
+}
