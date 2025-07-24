@@ -1,0 +1,88 @@
+@import "../../../global.less";
+
+.main {
+  width: 368px;
+  margin: 0 auto;
+  @media screen and (max-width: @screen-sm) {
+    width: 95%;
+  }
+
+  .icon {
+    margin-left: 16px;
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+
+  .other {
+    margin-top: 24px;
+    line-height: 22px;
+    text-align: left;
+
+    .register {
+      float: right;
+    }
+  }
+
+  :global {
+    .antd-pro-login-submit {
+      width: 100%;
+      margin-top: 24px;
+    }
+  }
+}
+
+.account-switch {
+  position: relative;
+  padding-top: 40px;
+
+  :global {
+    .ant-card-body {
+      padding: 24px 0 0 0;
+    }
+  }
+
+  .user-icon {
+    position: absolute;
+    top: -40px;
+    left: calc(50% - 40px);
+    color: #fff;
+    background-color: @primary-color;
+  }
+
+  .switch-title {
+    padding-bottom: 24px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .account-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    line-height: 2;
+    border-top: 1px solid @border-color-base;
+
+    &:not(.inactive):hover {
+      box-shadow: 0 0 6px 1px @border-color-base;
+      cursor: pointer;
+    }
+
+    &.inactive {
+      color: #848899;
+    }
+
+    .info {
+      color: #c7cad4;
+      font-size: 12px;
+    }
+  }
+}

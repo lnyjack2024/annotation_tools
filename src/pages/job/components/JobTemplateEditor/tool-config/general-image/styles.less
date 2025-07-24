@@ -1,0 +1,267 @@
+.container {
+  display: flex;
+  color: #42526e;
+  border: 1px solid #dcdfe3;
+
+  .list {
+    width: 240px;
+    border-right: 1px solid #dcdfe3;
+  }
+
+  .editor {
+    flex: 1;
+    padding: 20px;
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin: -12px;
+      margin-bottom: 8px;
+    }
+
+    :global {
+      .ant-form-item-label > label,
+      .ant-checkbox-wrapper {
+        color: #42526e;
+      }
+    }
+  }
+}
+
+.ontology {
+  .ontology-info {
+    display: flex;
+    align-items: center;
+    padding: 4px 12px;
+    cursor: pointer;
+
+    &.selected {
+      background-color: rgba(34, 122, 122, 0.1);
+    }
+  }
+
+  .child {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 4px 12px 4px 44px;
+    cursor: pointer;
+
+    &.selected {
+      background-color: rgba(34, 122, 122, 0.1);
+    }
+
+    &::before {
+      position: absolute;
+      bottom: 50%;
+      left: 20px;
+      width: 16px;
+      height: 22px;
+      border-bottom: 1px solid #dcdfe3;
+      border-left: 1px solid #dcdfe3;
+      content: ' ';
+    }
+  }
+}
+
+.color-dot {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  background-color: #fff;
+  border: 1px solid #dcdfe3;
+  border-radius: 50%;
+}
+
+.add {
+  margin-bottom: 4px;
+  padding: 4px 12px;
+  border-top: 1px dashed #dcdfe3;
+  border-bottom: 1px dashed #dcdfe3;
+  cursor: pointer;
+}
+
+.tool-selector {
+  :global {
+    .ant-select-selection-item {
+      display: flex;
+      align-items: center;
+
+      span {
+        padding-left: 8px;
+      }
+    }
+  }
+}
+.tool-selector-dropdown {
+  :global {
+    .ant-select-item-option-content {
+      display: flex;
+      align-items: center;
+
+      span {
+        padding-left: 8px;
+      }
+    }
+  }
+}
+
+.point-selector {
+  width: 138px;
+  padding: 8px 12px;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 4px 11px 0 rgba(66, 82, 110, 0.32);
+
+  .point-selector-item {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background: #f6f7f9;
+    }
+    &.selected {
+      border: 1px solid #7a869a;
+    }
+  }
+}
+
+.edge-selector {
+  width: 160px;
+  padding: 8px 12px;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 4px 11px 0 rgba(66, 82, 110, 0.32);
+
+  .edge-selector-item {
+    margin: 0 -12px;
+    padding: 0 12px;
+    cursor: pointer;
+
+    & > div {
+      width: 100%;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:hover {
+      background-color: #f6f7f9;
+    }
+    &.selected {
+      background-color: #7a869a;
+    }
+  }
+}
+
+.styler {
+  margin-bottom: 22px;
+  color: #42526e;
+
+  .title {
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .content {
+    padding: 16px;
+    background: #f6f7f9;
+    border-radius: 4px;
+
+    .item {
+      display: flex;
+      align-items: center;
+
+      .item-title {
+        width: 48px;
+        height: 32px;
+        margin-right: 28px;
+        margin-bottom: 16px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  :global {
+    .ant-form-item {
+      margin-bottom: 16px;
+    }
+    .ant-divider {
+      margin: 0 0 16px 0;
+    }
+    .ant-form-item-label > label,
+    .ant-checkbox-wrapper,
+    .ant-radio-wrapper {
+      color: #42526e;
+    }
+  }
+}
+
+.styler-btns {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 24px;
+}
+
+.attr-item-add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  margin-top: 16px;
+  border: 1px dashed #a0aabc;
+  cursor: pointer;
+
+  &.disabled {
+    cursor: not-allowed;
+
+    & > a {
+      color: #a0aabc;
+      cursor: not-allowed;
+    }
+  }
+}
+.attr-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #f6f7f9;
+  border: 1px solid #dcdfe3;
+
+  & > div {
+    display: flex;
+    align-items: center;
+  }
+
+  :global {
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.point-edge-item {
+  margin-bottom: 16px;
+
+  :global {
+    .ant-col {
+      display: flex;
+      align-items: center;
+
+      & > * {
+        margin-right: 8px;
+      }
+    }
+  }
+}

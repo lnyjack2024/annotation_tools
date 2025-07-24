@@ -1,0 +1,29 @@
+@import "../../global.less";
+
+.menu {
+  :global(.anticon) {
+    margin-right: 8px;
+  }
+  :global(.ant-dropdown-menu-item) {
+    width: 160px;
+    min-width: 160px;
+  }
+}
+
+.dropDown {
+  vertical-align: top;
+  cursor: pointer;
+  > i {
+    font-size: 16px !important;
+    transform: none !important;
+    svg {
+      position: relative;
+      top: -1px;
+    }
+  }
+}
+
+.flag {
+  padding-right: 8px;
+  vertical-align: middle;
+}

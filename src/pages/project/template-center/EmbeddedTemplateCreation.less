@@ -1,0 +1,343 @@
+.template-config-wrapper {
+  min-height: 100px;
+  padding: 0px 0px 14px;
+  background: transparent;
+
+  // .ant-popover {
+  //   max-width: 500px;
+  // }
+}
+
+.template-config-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  margin-bottom: 14px;
+
+  .title {
+    color: #42526e;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .operations {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.template-config-button {
+  padding: 0 0 14px;
+  color: #227a7a;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.template-config {
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0px 2px 8px rgba(122, 134, 154, 0.2);
+
+  .ant-tabs.ant-tabs-left {
+    .ant-tabs-nav {
+      width: 120px;
+
+      .ant-tabs-tab {
+        justify-content: flex-end;
+        width: 100%;
+        margin: 16px 0 0 0;
+        padding: 2px 16px;
+        color: #42526e;
+        line-height: 22px;
+        white-space: normal;
+        user-select: none;
+
+        &-active {
+          font-weight: normal;
+        }
+      }
+
+      .ant-tabs-ink-bar {
+        right: 0;
+        width: 4px;
+      }
+    }
+
+    .ant-tabs-content-holder {
+      border-left: 1px solid #dde0e5;
+
+      .ant-tabs-content {
+        .ant-tabs-tabpane {
+          padding-left: 40px;
+
+          .template-config-content {
+            flex: 1;
+            height: auto;
+
+            &-top {
+              margin-bottom: 40px;
+
+              &-title {
+                color: #42526e;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+              }
+
+              &-tip {
+                margin-top: 4px;
+                color: #7a869a;
+                font-size: 14px;
+                line-height: 22px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .ant-form {
+    .ant-form-item {
+      margin-bottom: 6px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .ant-form-item-label {
+        label {
+          color: #42526e;
+        }
+
+        .anticon.anticon-info-circle {
+          margin-left: 4px;
+          color: #7a869a;
+        }
+      }
+
+      .ant-form-item-control {
+        .ant-radio-wrapper,
+        .ant-checkbox-wrapper {
+          color: #7a869a;
+
+          .anticon-info-circle {
+            margin-left: 5px;
+          }
+
+          &-checked {
+            color: #42526e;
+          }
+        }
+
+        .ant-slider {
+          .ant-slider-track {
+            background-color: #42526e;
+          }
+
+          .ant-slider-handle {
+            border: none;
+            //   &:before {
+            //     border-radius: 50%;
+            //     border: 2px solid #42526e;
+            //   }
+            //   &:after {
+            //     box-shadow: 0 0 2px #42526e;
+            //   }
+          }
+        }
+
+        .ant-tag {
+          margin: 2px;
+          color: #227a7a;
+          background-color: #e9f2f2;
+          border-color: #7aafaf;
+
+          .anticon-close {
+            color: #227a7a;
+          }
+        }
+      }
+
+      &.align-baseline > .ant-row {
+        align-items: baseline;
+      }
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.common-panel {
+  padding: 24px;
+  border: 1px solid #dde0e5;
+
+  &.basic-info-panel .ant-form-item {
+    margin-bottom: 20px;
+  }
+}
+
+.common-footer {
+  margin-top: 44px;
+  text-align: right;
+}
+
+.form-block {
+  margin-bottom: 40px;
+  padding: 0 16px;
+
+  .form-title {
+    margin-bottom: 16px;
+    margin-left: -16px;
+    color: #42526e;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+
+    .anticon-info-circle {
+      margin-left: 5px;
+      color: #7a869a;
+    }
+
+    &:before {
+      display: inline-block;
+      width: 4px;
+      height: 20px;
+      margin-right: 12px;
+      vertical-align: middle;
+      background: #e9f2f2;
+      content: "";
+    }
+
+    &-sub {
+      margin-top: 4px;
+      color: #7a869a;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  .form-item-required {
+    margin-right: 4px;
+    color: #f53f3f;
+  }
+
+  .suffix {
+    margin-left: 8px;
+  }
+}
+
+.form-title-inline {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 14px;
+  margin-bottom: 0;
+
+  .title {
+    color: #42526e;
+  }
+
+  .ant-form-item {
+    margin-bottom: 0;
+    margin-left: 12px;
+  }
+}
+
+.ant-select-selector {
+  color: #42526e;
+}
+
+.ant-modal-header {
+  .ant-modal-title {
+    color: #42526e;
+    font-weight: 600;
+  }
+}
+
+// reset graph config height in modal
+.ant-modal-body > .easy-form-graph-config {
+  height: 100%;
+}
+
+.form-item-control-sub {
+  margin-top: 4px;
+  color: #7a869a;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.ant-form-item,
+.ant-input,
+.ant-input-number-input,
+.ant-input-number-group-addon,
+.ant-select,
+.ant-form-item-label > label,
+.ant-checkbox-wrapper {
+  color: #42526e !important;
+}
+
+.ant-btn.ant-btn-default,
+.ant-btn.ant-btn-dashed,
+.ant-btn.ant-btn-text {
+  color: #42526e;
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.ant-select.ant-select-borderless.ant-select-single {
+  .ant-select-arrow {
+    color: #7a869a;
+  }
+
+  .ant-select-selector {
+    padding: 0;
+
+    .ant-select-selection-item {
+      font-weight: 500;
+    }
+  }
+}
+
+.ant-select-dropdown {
+  .ant-select-item {
+    height: 26px;
+    min-height: 26px;
+    padding: 0;
+    line-height: 26px;
+
+    &-group {
+      margin: 0 8px;
+    }
+
+    &-option {
+      margin: 0;
+      padding-right: 14px;
+      padding-left: 24px;
+      font-weight: 400;
+
+      &-selected:not(.easyform-select-item-option-disabled) {
+        color: #227a7a;
+        font-weight: 400;
+        background-color: transparent;
+      }
+
+      &-active:not(.easyform-select-item-option-disabled) {
+        color: #42526e;
+        font-weight: 400;
+        background-color: #e9f2f2;
+      }
+    }
+  }
+}

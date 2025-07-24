@@ -1,0 +1,111 @@
+@import "../../global.less";
+
+.jobTypeContainer {
+  position: relative;
+  width: 80%;
+  height: 200px;
+  margin-bottom: 32px;
+  color: #848899;
+  background-color: transparent;
+  border: 1px solid @border-color-base;
+  border-radius: 4px;
+
+  .icon {
+    margin-bottom: 24px;
+    padding: 24px;
+    font-size: 48px;
+    background-color: rgba(199, 202, 212, 0.2);
+    border-radius: 50%;
+  }
+
+  .upcoming {
+    position: absolute;
+    top: 32px;
+    right: -1px;
+    padding: 4px 8px;
+    color: #fff;
+    font-size: 12px;
+    background-color: #df6565;
+    border-radius: 4px 0 0 4px;
+  }
+
+  &:hover:not(:disabled) {
+    box-shadow: 0 0 6px 1px @border-color-base;
+    cursor: pointer;
+  }
+
+  &:disabled {
+    .icon {
+      color: rgba(132, 136, 153, 0.5);
+    }
+    :global {
+      .ant-typography {
+        color: inherit;
+      }
+    }
+  }
+
+  &:active {
+    border: 1px solid @border-color-base;
+    outline: none;
+  }
+}
+
+.content-container {
+  max-width: 896px;
+  margin: 24px auto;
+
+  .steps {
+    margin-bottom: 48px;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid @border-color-base;
+
+    & > :global(.ant-btn) {
+      min-width: 100px;
+    }
+  }
+}
+
+.description-height {
+  :global {
+    .ck-content {
+      height: 130px;
+      line-height: 1.5;
+    }
+  }
+}
+
+.tag {
+  font-weight: bold;
+  line-height: 22px;
+  border-radius: 4px;
+}
+
+.linkContainer {
+  width: 160px;
+
+  .linkIcon {
+    display: none;
+  }
+
+  &:hover {
+    .linkIcon {
+      display: inline-block;
+      cursor: pointer;
+    }
+  }
+}
+
+.link {
+  margin-right: 6px;
+  color: @primary-color;
+  &:hover {
+    color: @primary-color;
+  }
+}

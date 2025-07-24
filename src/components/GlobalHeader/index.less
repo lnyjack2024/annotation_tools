@@ -1,0 +1,130 @@
+@import "../../global.less";
+
+@pro-header-hover-bg: rgba(0, 0, 0, 0.025);
+
+.logo {
+  display: inline-block;
+  height: @layout-header-height;
+  padding: 0 0 0 24px;
+  font-size: 20px;
+  line-height: @layout-header-height;
+  vertical-align: top;
+  cursor: pointer;
+  img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.menu {
+  :global(.anticon) {
+    margin-right: 8px;
+  }
+  :global(.ant-dropdown-menu-item) {
+    min-width: 160px;
+  }
+}
+
+.trigger {
+  height: @layout-header-height;
+  padding: ~"calc((@{layout-header-height} - 20px) / 2)" 24px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s, padding 0s;
+  &:hover {
+    background: @pro-header-hover-bg;
+  }
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: right;
+  height: 100%;
+  margin-left: auto;
+  overflow: hidden;
+  .action {
+    display: inline-block;
+    height: 100%;
+    padding: 0 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    > i {
+      color: @text-color;
+      vertical-align: middle;
+    }
+    &:hover {
+      background: @pro-header-hover-bg;
+    }
+    &:global(.opened) {
+      background: @pro-header-hover-bg;
+    }
+  }
+  .search {
+    padding: 0 12px;
+    &:hover {
+      background: transparent;
+    }
+  }
+  .account {
+    .avatar {
+      margin: ~"calc((@{layout-header-height} - 24px) / 2)" 0;
+      margin-right: 8px;
+      color: @primary-color;
+      background: rgba(255, 255, 255, 0.85);
+    }
+  }
+}
+
+.dark {
+  height: @layout-header-height;
+  .action {
+    color: rgba(255, 255, 255, 0.85);
+    > i {
+      color: rgba(255, 255, 255, 0.85);
+    }
+    &:hover,
+    &:global(.opened) {
+      background: @primary-color;
+    }
+  }
+}
+
+:global(.ant-pro-global-header) {
+  .dark {
+    .action {
+      color: @text-color;
+      > i {
+        color: @text-color;
+      }
+      &:hover {
+        color: rgba(255, 255, 255, 0.85);
+        > i {
+          color: rgba(255, 255, 255, 0.85);
+        }
+      }
+    }
+  }
+}
+
+.modal-menu-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 240px;
+  color: rgb(132, 136, 153);
+}
+
+.icon-container {
+  width: 140px;
+  padding: 24px 12px 24px 12px;
+  text-align: center;
+  border: 1px solid rgb(229, 231, 237);
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background: #f6f7f9;
+  }
+}

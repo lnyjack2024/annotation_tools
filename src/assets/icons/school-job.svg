@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/data/校企合作</title>
+    <g id="icon/data/校企合作" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Path-10" stroke="#7A869A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="5.88888889 19.7682927 27.8888889 30.5 49.8888889 19.7682927 27.8888889 10.5"></polygon>
+        <path d="M42,24 L42,33.939649 C41.9999935,34.6047599 41.6693511,35.2263555 41.117824,35.5980951 C34.2912054,40.199365 29.9185974,42.5 28,42.5 C26.0814026,42.5 21.7087946,40.199365 14.8821759,35.5980951 C14.3306441,35.2263565 14,34.6047578 14,33.9396436 L14,24.5 L14,24.5" id="Path-12" stroke="#7A869A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        <rect id="Rectangle" fill="#7A869A" x="45" y="40" width="3" height="7"></rect>
+        <line x1="46.5" y1="42.5" x2="46.5" y2="21.5" id="Path-13" stroke="#7A869A"></line>
+        <polyline id="Path-14" stroke="#7A869A" stroke-width="2" stroke-linecap="round" transform="translate(28.000000, 23.000000) rotate(-180.000000) translate(-28.000000, -23.000000) " points="15 26 28 20 41 26"></polyline>
+    </g>
+</svg>

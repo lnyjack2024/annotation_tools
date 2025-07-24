@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Slice</title>
+    <g id="模板配置" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="选择多边形" transform="translate(-610.000000, -356.000000)" fill="#7A869A" fill-rule="nonzero">
+            <g id="tools-copy-6" transform="translate(606.000000, 354.000000)">
+                <g id="rectangle" transform="translate(4.000000, 2.000000)">
+                    <path d="M20.8,4 C20.9104569,4 21,4.08954305 21,4.2 L21,14.6052343 C21,14.6506486 20.9845438,14.6947107 20.9561738,14.7301733 L16.8904344,19.8123475 C16.7993004,19.926497 16.658234,20 16.5,20 L3.5,20 C3.22385763,20 3,19.7761424 3,19.5 L3,8.5 C3,8.35535399 3.06142125,8.22505369 3.15960514,8.13375771 L3.2226499,8.08397485 L9.29822727,4.03358994 C9.33108077,4.01168761 9.36968231,4 9.40916731,4 L20.8,4 Z M16,9 L4,9 L4,19 L16,19 L16,9 Z M19.999,5.707 L17,8.706 L17,18.073 L20,14.323 L19.999,5.707 Z M16.292,8 L19.292,5 L9.651,5 L5.151,8 L16.292,8 Z" id="Combined-Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

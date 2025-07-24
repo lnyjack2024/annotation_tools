@@ -1,0 +1,59 @@
+.ontology-text-item {
+  display: flex;
+  justify-content: space-between;
+  min-height: 48px;
+  margin: 4px 0;
+  padding: 8px 16px;
+  border: 1px solid #e5e7ed;
+
+  & > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &:hover {
+    background-color: #fafafc;
+    cursor: pointer;
+  }
+
+  .color {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background: #fff;
+    border-radius: 50%;
+  }
+
+  .name {
+    margin-left: 8px;
+    color: #42526e;
+  }
+
+  .desc {
+    width: 100%;
+    margin-top: 4px;
+    padding-left: 24px;
+    color: #7a869a;
+  }
+
+  .right-wrapper {
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+    align-items: start;
+    justify-content: flex-end;
+    width: 100px;
+    :global {
+      .anticon {
+        padding: 8px;
+        color: #7a869a;
+      }
+    }
+  }
+
+  :global {
+    .ant-form-inline .ant-form-item {
+      margin-right: 8px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.size-group-editor {
+  margin-bottom: 8px;
+
+  .desc-label {
+    color: #909090;
+    font-size: 12px;
+  }
+
+  .has-error {
+    border-color: @error-color;
+    box-shadow: 0 0 0 2px fade(@error-color, 20%);
+  }
+
+  .size-group-label {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .size-editor {
+    & > div {
+      display: flex;
+      align-items: baseline;
+    }
+
+    input {
+      flex: 1;
+    }
+  }
+}

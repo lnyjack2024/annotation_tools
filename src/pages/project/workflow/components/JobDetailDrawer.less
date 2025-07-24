@@ -1,0 +1,73 @@
+.job-detail-drawer {
+  .title {
+    display: flex;
+    justify-content: space-between;
+    width: 548px;
+    color: #42526e;
+    font-size: 20px;
+  }
+}
+
+.orientated-selector {
+  .middle-circle {
+    align-self: center;
+    margin: 0 9px;
+    font-size: 31px;
+  }
+  .clear {
+    top: -50px;
+    float: left;
+    height: 0;
+  }
+  .error {
+    margin: 8px 0;
+    color: #42526e;
+  }
+}
+
+.select-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 630px;
+  text-align: center;
+
+  .targetJob {
+    position: relative;
+    width: 472px;
+    height: 48px;
+    margin-bottom: 60px;
+    padding: 0 16px;
+    color: #42526e;
+    line-height: 48px;
+    text-align: left;
+    background: #fff;
+    border: 1px solid #e5e7ed;
+    cursor: pointer;
+
+    &:hover {
+      background: #f6f7f9;
+    }
+
+    &.disabled {
+      color: #b2b8c2;
+      cursor: not-allowed;
+
+      &:hover {
+        background: #fff;
+      }
+    }
+
+    .arrow {
+      float: right;
+      margin-top: 17px;
+    }
+  }
+}
+
+.tip {
+  margin-top: 38px;
+  color: #42526e;
+  line-height: 20px;
+}

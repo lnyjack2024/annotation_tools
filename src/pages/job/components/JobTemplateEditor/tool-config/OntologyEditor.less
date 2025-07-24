@@ -1,0 +1,63 @@
+.ontology-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+  padding: 8px 8px 8px 16px;
+  border: 1px solid #e5e7ed;
+
+  &:hover {
+    background-color: #fafafc;
+    cursor: pointer;
+  }
+
+  .color {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background: #fff;
+    border-radius: 50%;
+  }
+
+  .name {
+    display: inline-block;
+    margin-left: 12px;
+    font-weight: 700;
+  }
+
+  .size {
+    padding-top: 4px;
+    padding-left: 28px;
+    font-size: 12px;
+  }
+
+  .rich-text-container {
+    max-height: 200px;
+    padding-right: 5px;
+    overflow-y: auto;
+
+    & img {
+      max-width: 100%;
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #e5e7ed;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #a6a9b5;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #c7cad4;
+    }
+  }
+  .action-btn {
+    height: 21px;
+    padding: 0;
+    font-size: 12px;
+    line-height: 22px;
+    border: none;
+  }
+}

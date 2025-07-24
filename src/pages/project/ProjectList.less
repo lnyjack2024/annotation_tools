@@ -1,0 +1,107 @@
+@import "../../global.less";
+
+.projectCard {
+  .extra {
+    display: none;
+  }
+
+  &:hover {
+    .extra {
+      display: block;
+    }
+  }
+
+  .title {
+    margin: 0 0 4px;
+    color: #7a869a;
+    line-height: 24px;
+  }
+
+  .content {
+    width: 100%;
+    min-height: 28px;
+    margin: 0;
+    padding: 2px 0;
+    overflow: hidden;
+    color: #42526e;
+    line-height: 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    //background: #f6f7f9;
+    border-radius: 2px;
+  }
+}
+
+.extraImg {
+  width: 195px;
+  margin-top: -30px;
+  text-align: center;
+
+  img {
+    width: 100%;
+  }
+}
+
+.newButton {
+  width: 100%;
+  height: 163px;
+  color: @text-color-secondary;
+  background-color: @white;
+  border: none;
+}
+
+.cardAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+}
+
+.pageHeaderContent {
+  position: relative;
+}
+
+.tag {
+  height: 32px;
+  margin: 0 0 0 10px;
+  color: @primary-color;
+  line-height: 32px;
+  background-color: rgba(34, 122, 122, 0.08);
+  border: 1px solid rgba(34, 122, 122, 0.2);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: @screen-lg) {
+  .contentLink {
+    a {
+      margin-right: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: @screen-md) {
+  .extraImg {
+    display: none;
+  }
+}
+
+@media screen and (max-width: @screen-sm) {
+  .pageHeaderContent {
+    padding-bottom: 30px;
+  }
+
+  .contentLink {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 1000px;
+
+    a {
+      margin-right: 16px;
+    }
+
+    img {
+      margin-right: 4px;
+    }
+  }
+}

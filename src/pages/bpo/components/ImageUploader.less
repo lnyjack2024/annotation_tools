@@ -1,0 +1,64 @@
+.image-uploader {
+  width: 188px;
+
+  .preview {
+    position: relative;
+    width: 188px;
+    height: 104px;
+    overflow: hidden;
+    background-size: 100% 100%;
+
+    .modal {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 188px;
+      height: 104px;
+      color: white;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.3);
+      transition: top 300ms ease-in-out;
+
+      .clear {
+        display: block;
+        margin: 20px auto 0;
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: bold;
+
+        &:hover {
+          color: white;
+        }
+      }
+
+      .upload {
+        margin-top: 12px;
+
+        .reupload {
+          color: rgba(255, 255, 255, 0.7);
+          font-weight: bold;
+          cursor: pointer;
+
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .modal {
+        top: 0;
+      }
+    }
+  }
+
+  .plus-icon {
+    margin-top: 4px;
+    margin-bottom: 8px;
+  }
+
+  .upload-placeholder {
+    margin-bottom: 6px;
+    color: #7a869a;
+  }
+}

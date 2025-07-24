@@ -1,0 +1,59 @@
+.clickable-text {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+    background: #eef5f5;
+  }
+}
+
+.workflow-card {
+  .title {
+    display: flex;
+    justify-content: space-between;
+    height: 26px;
+    overflow: hidden;
+    color: #3e5270;
+    font-weight: normal;
+    line-height: 24px;
+    cursor: pointer;
+
+    .text {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &:hover {
+      .clickable-text {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .point {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-left: 8px;
+    background-color: #01897f;
+    border-radius: 50%;
+  }
+
+  .list-item-column {
+    height: 100%;
+    padding: 12px 16px;
+
+    .header {
+      margin: 0;
+      color: #3e5270;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .content {
+      color: #7a869a;
+    }
+  }
+}
