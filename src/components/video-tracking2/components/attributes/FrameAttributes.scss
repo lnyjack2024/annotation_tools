@@ -1,0 +1,30 @@
+.video-tracking-app .frame-attributes {
+  border-top: 1px solid #32353F;
+  margin-left: -8px;
+  margin-right: -8px;
+  padding: 8px;
+  position: relative;
+
+  &:first-child {
+    border-top: none;
+    margin-top: -8px;
+  }
+
+  &.selected::before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #4A90E2;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 6px;
+    color: #FFFFFF;
+  }
+}

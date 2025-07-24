@@ -1,0 +1,194 @@
+.icon-button {
+  height: 30px;
+  padding: 1px 6px 0;
+  font-size: 24px;
+  opacity: 0.6;
+  outline: none;
+  cursor: pointer;
+  &:hover, &--active {
+    opacity: 1;
+  }
+}
+
+.preferences_modal {
+  .ant-modal-content {
+    background: #363C4D;
+    border: 1px solid #666D80;
+    box-shadow: 0px 4px 16px rgba(15, 18, 25, 0.12);
+
+    .ant-modal-close-x {
+      width: 40px;
+      height: 40px;
+      font-size: 14px;
+      font-style: normal;
+      line-height: 40px;
+      color: rgba(255, 255, 255, 0.6);
+      &:hover {
+        color: rgba(255, 255, 255, 0.9);
+      }
+    }
+
+    .ant-modal-body {
+      padding: 12px;
+    }
+
+    .ant-modal-header {
+      background-color: #4C5366;
+      padding: 8px 12px;
+    }
+
+    .ant-modal-header {
+      .ant-modal-title {
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.9);
+      }
+      border-bottom: none;
+    }
+
+    .preferences-settings {
+      &-item {
+        padding-bottom: 22px;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+          margin-bottom: 12px;
+        }
+
+        &-title {
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.9);
+          line-height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 16px;
+
+          .reset {
+            width: 24px;
+            height: 24px;
+            background: #212633;
+            border-radius: 2px;
+            font-size: 13px;
+            color: #9AA0B2;
+            text-align: center;
+            cursor: pointer;
+          }
+        }
+
+        &-content {
+          padding-left: 30px;
+          color: rgba(255, 255, 255, 0.7);
+          font-size: 12px;
+          line-height: 20px;
+
+          div.item {
+            margin-bottom: 16px;
+          }
+
+          .ant-slider {
+            margin: 0;
+            width: 170px;
+
+            .ant-slider-rail {
+              background-color: rgba(255, 255, 255, 0.2);
+            }
+
+            .ant-slider-track {
+              background-color: #4A90E2;
+            }
+
+            .ant-slider-handle {
+              width: 16px;
+              height: 16px;
+              margin-top: -6px;
+              background: #363C4D;
+              border: 2px solid rgba(74, 144, 226, 0.6);
+            }
+
+            &:hover {
+              .ant-slider-rail {
+                background-color: rgba(255, 255, 255, 0.2);
+              }
+
+              .ant-slider-track {
+                background-color: #4A90E2;
+              }
+
+              .ant-slider-handle {
+                border-color: rgba(74, 144, 226, 0.6);
+
+                &.ant-slider-handle:not(.ant-tooltip-open) {
+                  border-color: rgba(74, 144, 226, 0.6);
+                }
+              }
+            }
+          }
+
+          .ant-input-number {
+            width: 54px;
+            background: #212633;
+            border-radius: 4px;
+            border-color: #212633;
+            color: #ffffff;
+            border: none;
+            &-focused {
+              box-shadow: none;
+              outline: none;
+            }
+            .ant-input-number-handler-wrap {
+              display: none;
+            }
+            .ant-input-number-input {
+              height: 22px;
+              padding: 0;
+              text-align: center;
+              border: 1px solid #212633;
+              color: rgba(255, 255, 255, 0.6);
+              &:not(:disabled) {
+                &:hover {
+                  cursor: pointer;
+                  border-color: rgba(255, 255, 255, 0.3);
+                }
+                &:focus {
+                  cursor: text;
+                  border-color: #5BA8FF;
+                }
+              }
+            }
+          }
+          .preferences-play-mode {
+            .ant-radio-wrapper {
+              font-size: 12px;
+              color: rgba(255, 255, 255, 0.7);
+              &.ant-radio-wrapper-checked {
+                color: rgba(255, 255, 255, 0.9);
+              }
+              .ant-radio-inner {
+                width: 14px;
+                height: 14px;
+                background: rgba(0,0,0,0);
+                &::after {
+                  background-color: #ffffff;
+                }
+              }
+              .ant-radio-checked {
+                .ant-radio-inner {
+                  border-color: #ffffff;
+                }
+              }
+              .ant-radio-wrapper:hover .ant-radio,
+              .ant-radio:hover .ant-radio-inner,
+              .ant-radio-input:focus + .ant-radio-inner {
+                border-color: #ffffff;
+                box-shadow: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

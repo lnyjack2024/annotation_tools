@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type React from 'react';
 import {
   BulbOutlined,
@@ -128,3 +129,12 @@ export const DEFAULT_WORKER_NUM = 1;
 export const PAGE_SIZE_OPTIONS = ['10', '20', '50', '100'];
 
 export const DEFAULT_OCCUPY_STRING = ' - ';
+=======
+// eslint-disable-next-line import/prefer-default-export
+export enum Language {
+  ZH_CN = 'zh-CN',
+  EN_US = 'en-US',
+  JA_JP = 'ja-JP',
+  KO_KR = 'ko-KR',
+}
+>>>>>>> origin/master

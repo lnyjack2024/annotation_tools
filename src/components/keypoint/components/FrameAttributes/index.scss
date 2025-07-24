@@ -1,0 +1,51 @@
+.landmark-annotation-app .frame-attributes-panel {
+  width: 240px;
+  margin: 4px;
+  padding: 8px;
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .edit-btn {
+      color: #34CBD1;
+      cursor: pointer;
+    }
+  }
+
+  .valid-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    user-select: none;
+
+    & > div {
+      width: 108px;
+      height: 24px;
+      border: 1px solid #686D79;
+      text-align: center;
+      cursor: pointer;
+
+      &:first-child {
+        border-radius: 2px 0 0 2px;
+      }
+      &:last-child {
+        border-radius: 0 2px 2px 0;
+      }
+
+      &.disabled {
+        cursor: not-allowed;
+      }
+      &.active {
+        background-color: #686D79;
+      }
+      &.invalid {
+        border-color: #7C433C;
+        &.active {
+          background-color: #7C433C;
+        }
+      }
+    }
+  }
+}

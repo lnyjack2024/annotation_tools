@@ -1,0 +1,41 @@
+@import "../../../constants";
+
+.qa-reason-container{
+  @include themify() {
+    color: theme(default-font-color);
+  }
+}
+
+.qa-reason-container .ant-select .ant-select-selector {
+  @include themify() {
+    border-color: theme(default-border-color);
+  }
+  background-color: #FFFFFF00;
+  box-shadow: none;
+  border-radius: 4px;
+}
+.qa-reason-container .ant-select .ant-select-arrow{
+  visibility: hidden;
+}
+.qa-reason-container .ant-select-focused{
+  @include themify() {
+    border-color: theme(highlight-border-color);
+  }
+  box-shadow: none;
+  &:not(.ant-select-disabled).ant-select-single .ant-select-selector{
+    @include themify() {
+      border-color: theme(highlight-border-color);
+    }
+  }
+}
+.qa-reason-container .ant-select:hover{
+  @include themify() {
+    border-color: theme(highlight-border-color);
+  }
+  box-shadow: none;
+  .ant-select-selector{
+    @include themify() {
+      border-color: theme(highlight-border-color);
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import '../../../constants.scss';
+
+.line-role-radio-container{
+  @include themify() {
+    color: theme(default-font-color);
+  }
+  width: 100%;
+  height: fit-content;
+  background-color: transparent;
+  .line-role-radio-group {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .line-role-radio-button {
+    height: 30px;
+    line-height: 28px;
+    min-width: 113px ;
+    margin-right: 16px;
+    border-radius: 4px;
+    &.fold {
+      width: 58px;
+      height: 30px;
+      min-width: initial;
+      color: rgba(255, 255, 255, .6);
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+      font-size: 16px;
+      border: none;
+      .icon {
+        height: 100%;
+        text-align: center;
+        line-height: 34px;
+      }
+      &:hover {
+        color: rgba(255, 255, 255, 1);
+      }
+      &.active {
+        .icon {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
+.line-role-radio-title{
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.line-role-radio-color{
+  width: 6px;
+  margin: 13px 0px 0px 0px;
+  border-radius: 999px;
+  height: 6px;
+  float:left;
+}

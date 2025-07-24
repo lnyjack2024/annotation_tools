@@ -1,0 +1,47 @@
+@import '../../../constants.scss';
+@import '../../../resetEasyform.scss';
+
+.line-detail-container {
+  border-radius: 4px;
+  margin-bottom: 12px;
+
+  & .line-text{
+    margin-top: 5px;
+    background: transparent;
+    border-color: #FFFFFF99;
+    @include themify() {
+      color: theme(default-font-color);
+      border-radius: 4px;
+    }
+    &:hover{
+      border-color: #FFFFFF99;
+      box-shadow: none;
+    }
+    &:focus{
+      border-color: #FFFFFF99;
+      box-shadow: none;
+    }
+    outline: none;
+  }
+}
+
+.line-detail-button {
+  float: right;
+  font-size: 12px;
+  opacity: 0.6;
+  position: relative;
+  right: -20px;
+  top: -10px;
+  outline: none;
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.attribute-title {
+  @include themify() {
+    color: theme(default-font-color);
+  }
+  width: 100%;
+  margin-bottom: 5px;
+}

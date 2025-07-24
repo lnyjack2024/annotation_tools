@@ -1,0 +1,111 @@
+{
+  "files": {
+    "static/js/0.8dd86fda.chunk.js": "static/js/0.8dd86fda.chunk.js",
+    "static/js/1.2898aa59.chunk.js": "static/js/1.2898aa59.chunk.js",
+    "advertisement.css": "static/css/advertisement.1bc2a27a.chunk.css",
+    "advertisement.js": "static/js/advertisement.ed58bf7e.chunk.js",
+    "dialogue.css": "static/css/dialogue.c6e12cd3.chunk.css",
+    "dialogue.js": "static/js/dialogue.afc85aca.chunk.js",
+    "editable-text.css": "static/css/editable-text.809d341c.chunk.css",
+    "editable-text.js": "static/js/editable-text.d4390233.chunk.js",
+    "index.js": "static/js/index.81c7315b.chunk.js",
+    "keypoint.css": "static/css/keypoint.a7fd1799.chunk.css",
+    "keypoint.js": "static/js/keypoint.3031855e.chunk.js",
+    "long-audio.css": "static/css/long-audio.560f95cb.chunk.css",
+    "long-audio.js": "static/js/long-audio.03dc4df9.chunk.js",
+    "question-answering.css": "static/css/question-answering.4307d5cb.chunk.css",
+    "question-answering.js": "static/js/question-answering.d2d3ff92.chunk.js",
+    "runtime-advertisement.js": "static/js/runtime-advertisement.98ef0aed.bundle.js",
+    "runtime-dialogue.js": "static/js/runtime-dialogue.98ef0aed.bundle.js",
+    "runtime-editable-text.js": "static/js/runtime-editable-text.98ef0aed.bundle.js",
+    "runtime-index.js": "static/js/runtime-index.98ef0aed.bundle.js",
+    "runtime-keypoint.js": "static/js/runtime-keypoint.98ef0aed.bundle.js",
+    "runtime-long-audio.js": "static/js/runtime-long-audio.98ef0aed.bundle.js",
+    "runtime-question-answering.js": "static/js/runtime-question-answering.98ef0aed.bundle.js",
+    "runtime-video-track-v2.js": "static/js/runtime-video-track-v2.98ef0aed.bundle.js",
+    "video-track-v2.css": "static/css/video-track-v2.12c1ef41.chunk.css",
+    "video-track-v2.js": "static/js/video-track-v2.333bae42.chunk.js",
+    "advertisement.html": "advertisement.html",
+    "dialogue.html": "dialogue.html",
+    "editable-text.html": "editable-text.html",
+    "index.html": "index.html",
+    "keypoint.html": "keypoint.html",
+    "long-audio.html": "long-audio.html",
+    "precache-manifest.9b83f659e83ae06adfbcf872171a7ba9.js": "precache-manifest.9b83f659e83ae06adfbcf872171a7ba9.js",
+    "question-answering.html": "question-answering.html",
+    "service-worker.js": "service-worker.js",
+    "static/css/advertisement.1bc2a27a.chunk.css.map": "static/css/advertisement.1bc2a27a.chunk.css.map",
+    "static/css/dialogue.c6e12cd3.chunk.css.map": "static/css/dialogue.c6e12cd3.chunk.css.map",
+    "static/css/editable-text.809d341c.chunk.css.map": "static/css/editable-text.809d341c.chunk.css.map",
+    "static/css/keypoint.a7fd1799.chunk.css.map": "static/css/keypoint.a7fd1799.chunk.css.map",
+    "static/css/long-audio.560f95cb.chunk.css.map": "static/css/long-audio.560f95cb.chunk.css.map",
+    "static/css/question-answering.4307d5cb.chunk.css.map": "static/css/question-answering.4307d5cb.chunk.css.map",
+    "static/css/video-track-v2.12c1ef41.chunk.css.map": "static/css/video-track-v2.12c1ef41.chunk.css.map",
+    "static/js/0.8dd86fda.chunk.js.LICENSE.txt": "static/js/0.8dd86fda.chunk.js.LICENSE.txt",
+    "static/js/1.2898aa59.chunk.js.LICENSE.txt": "static/js/1.2898aa59.chunk.js.LICENSE.txt",
+    "static/js/advertisement.ed58bf7e.chunk.js.LICENSE.txt": "static/js/advertisement.ed58bf7e.chunk.js.LICENSE.txt",
+    "static/js/dialogue.afc85aca.chunk.js.LICENSE.txt": "static/js/dialogue.afc85aca.chunk.js.LICENSE.txt",
+    "static/js/editable-text.d4390233.chunk.js.LICENSE.txt": "static/js/editable-text.d4390233.chunk.js.LICENSE.txt",
+    "static/js/keypoint.3031855e.chunk.js.LICENSE.txt": "static/js/keypoint.3031855e.chunk.js.LICENSE.txt",
+    "static/js/long-audio.03dc4df9.chunk.js.LICENSE.txt": "static/js/long-audio.03dc4df9.chunk.js.LICENSE.txt",
+    "static/js/question-answering.d2d3ff92.chunk.js.LICENSE.txt": "static/js/question-answering.d2d3ff92.chunk.js.LICENSE.txt",
+    "static/js/video-track-v2.333bae42.chunk.js.LICENSE.txt": "static/js/video-track-v2.333bae42.chunk.js.LICENSE.txt",
+    "video-track-v2.html": "video-track-v2.html"
+  },
+  "entrypoints": {
+    "advertisement": [
+      "static/js/runtime-advertisement.98ef0aed.bundle.js",
+      "static/js/0.8dd86fda.chunk.js",
+      "static/js/1.2898aa59.chunk.js",
+      "static/css/advertisement.1bc2a27a.chunk.css",
+      "static/js/advertisement.ed58bf7e.chunk.js"
+    ],
+    "dialogue": [
+      "static/js/runtime-dialogue.98ef0aed.bundle.js",
+      "static/js/0.8dd86fda.chunk.js",
+      "static/js/1.2898aa59.chunk.js",
+      "static/css/dialogue.c6e12cd3.chunk.css",
+      "static/js/dialogue.afc85aca.chunk.js"
+    ],
+    "editable-text": [
+      "static/js/runtime-editable-text.98ef0aed.bundle.js",
+      "static/js/0.8dd86fda.chunk.js",
+      "static/js/1.2898aa59.chunk.js",
+      "static/css/editable-text.809d341c.chunk.css",
+      "static/js/editable-text.d4390233.chunk.js"
+    ],
+    "index": [
+      "static/js/runtime-index.98ef0aed.bundle.js",
+      "static/js/0.8dd86fda.chunk.js",
+      "static/js/index.81c7315b.chunk.js"
+    ],
+    "keypoint": [
+      "static/js/runtime-keypoint.98ef0aed.bundle.js",
+      "static/js/0.8dd86fda.chunk.js",
+      "static/js/1.2898aa59.chunk.js",
+      "static/css/keypoint.a7fd1799.chunk.css",
+      "static/js/keypoint.3031855e.chunk.js"
+    ],
+    "long-audio": [
+      "static/js/runtime-long-audio.98ef0aed.bundle.js",
+      "static/js/0.8dd86fda.chunk.js",
+      "static/js/1.2898aa59.chunk.js",
+      "static/css/long-audio.560f95cb.chunk.css",
+      "static/js/long-audio.03dc4df9.chunk.js"
+    ],
+    "question-answering": [
+      "static/js/runtime-question-answering.98ef0aed.bundle.js",
+      "static/js/0.8dd86fda.chunk.js",
+      "static/js/1.2898aa59.chunk.js",
+      "static/css/question-answering.4307d5cb.chunk.css",
+      "static/js/question-answering.d2d3ff92.chunk.js"
+    ],
+    "video-track-v2": [
+      "static/js/runtime-video-track-v2.98ef0aed.bundle.js",
+      "static/js/0.8dd86fda.chunk.js",
+      "static/js/1.2898aa59.chunk.js",
+      "static/css/video-track-v2.12c1ef41.chunk.css",
+      "static/js/video-track-v2.333bae42.chunk.js"
+    ]
+  }
+}

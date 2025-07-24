@@ -1,0 +1,108 @@
+@import '../../../constants.scss';
+
+.line-text-container {
+  @include themify() {
+    color: theme(default-font-color);
+  }
+  margin-bottom: 16px;
+  & .ant-input-disabled {
+    @include themify() {
+      color: theme(default-font-color);
+      border-radius: 4px;
+    }
+    background: transparent;
+  }
+
+  & .line-text {
+    margin-top: 5px;
+    background: transparent;
+    border-radius: 4px;
+    outline: none;
+    @include themify() {
+      color: theme(highlight-font-color);
+      border-color: theme(default-border-color);
+    }
+    &:hover, &:focus {
+      @include themify() {
+        border-color: theme(highlight-border-color);
+      }
+      box-shadow: none;
+    }
+  }
+}
+
+.tags-group {
+  margin: 5px 0;
+}
+
+.tags-group-tag {
+  display: inline-block;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 2px 8px;
+  margin: 3px 4px 3px 0;
+  border-radius: 2px;
+  cursor: pointer;
+  &:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+
+  &-standalone {
+    background-color: rgba(113, 197, 20, 0.6);
+    &:active {
+      background-color: rgba(113, 197, 20, 0.4);
+    }
+  }
+
+  &-tag {
+    background-color: rgba(2, 122, 255, 0.6);
+    &:active {
+      background-color: rgba(2, 122, 255, 0.4);
+    }
+  }
+
+  &-disabled {
+    cursor: not-allowed;
+    background-color: rgba(2, 122, 255, 0.2);
+    &:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+    &:active {
+      background-color: rgba(2, 122, 255, 0.2);
+    }
+  }
+}
+
+.tags-group-tag-icon {
+  padding: 7px 5px 0 0;
+  float: left;
+  opacity: 0.6;
+}
+
+.line-text-content-title {
+  float: left;
+}
+
+.line-text-auto-transcribe {
+  float: left;
+  padding: 0 10px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.2;
+  }
+}
+
+.tags-group-shortcut {
+  padding: 5px 0 0 0;
+}
+
+.tags-group-tags {
+  margin-left: 28px;
+}
+
+.tooltip {
+  font-size: 12px;
+}

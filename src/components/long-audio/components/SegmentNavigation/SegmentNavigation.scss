@@ -1,0 +1,74 @@
+@import '../../constants.scss';
+@import '../VideoComp/VideoComp';
+
+.segment-navigation-container {
+  @include themify() {
+    background-color: theme(segment-abstract-background-color);
+    color: theme(default-font-color);
+  }
+  padding: 20px;
+  margin: 12px;
+
+  .duration-box {
+    margin-bottom: 16px;
+    .duration-item {
+      margin-left: 16px;
+      &:nth-of-type(1) {
+        margin-left: 0;
+      }
+      .value {
+        color: #eaeaeb;
+      }
+    }
+  }
+}
+.segment-navigation-list {
+  height: calc(100% - 70px);
+  margin-top: 16px;
+}
+.segment-navigation-item {
+  @include themify() {
+    background-color: theme(segment-navigation-item-background-color);
+    color: theme(highlight-font-color);
+  }
+  margin: 4px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.6;
+  outline: none;
+  cursor: pointer;
+
+  &:hover{
+    opacity: 1;
+  }
+  &:focus{
+    opacity: 1;
+  }
+}
+
+.segment-navigation-popover {
+  @include themify() {
+    color: theme(highlight-font-color);
+  }
+  max-width: 200px;
+}
+
+.segment-navigation-title {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.segment-navigation-item-focus {
+  opacity: 1;
+  border: 1px solid;
+  @include themify() {
+    border-color: theme(highlight-border-color);
+  }
+}
+
+.segment-navigation-item-empty {
+  background: transparent linear-gradient(45deg, dimgray 25%, transparent 25%, transparent 50%, dimgray 50%, dimgray 75%, transparent 75%, transparent 100%);
+  background-size: 8.49px 8.49px;
+}

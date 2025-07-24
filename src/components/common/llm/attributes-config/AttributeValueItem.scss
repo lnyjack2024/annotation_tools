@@ -1,0 +1,22 @@
+
+.llm-attributes-item {
+  margin-bottom: 4px;
+
+    & > div {
+      display: inline;
+      word-break: break-all;
+    }
+
+    &-label {
+      color: #666D80;
+      padding-right: 4px;
+    }
+
+    &-value {
+      color: #4C5366;
+    }
+
+    &.inline {
+      display: inline;
+    }
+}

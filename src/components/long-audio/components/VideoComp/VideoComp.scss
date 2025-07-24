@@ -1,0 +1,28 @@
+@import '../../constants.scss';
+
+$video-width: 500px;
+
+.video-container{
+  @include themify() {
+    background-color: theme(video-background-color);
+    font-color: theme(default-font-color);
+  }
+  text-align: center;
+  height: 40%;
+  margin: 12px;
+}
+.video-not-found{
+  width: 100%;
+  height: 0px;
+  line-height: 100%;
+  font-size: 50px;
+  font-weight: bolder;
+  color: #FFFFFF10;
+}
+.video{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+

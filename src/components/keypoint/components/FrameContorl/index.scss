@@ -1,0 +1,160 @@
+.landmark-annotation-app .frame-control {
+  font-size: 12px;
+  overflow: hidden;
+
+  & > div {
+    display: flex;
+    align-items: center;
+  }
+
+  .frames {
+    position: relative;
+  }
+
+  .frame-items-container {
+    position: absolute;
+    background-color: #3D424D;
+    z-index: 100;
+    width: 160px;
+    height: 100%;
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.5);
+    padding-top: 22px;
+  }
+
+  .frame-items {
+    background-color: #343846;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .frame-item-label {
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    user-select: none;
+    cursor: pointer;
+
+    & > div {
+      display: flex;
+      align-items: center;
+    }
+
+    &-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #FFFFFF;
+      margin-right: 8px;
+    }
+
+    &-review {
+      width: 6px;
+      height: 6px;
+      background-color: #FFFFFF;
+
+      &.approved {
+        background-color: #368D5F;
+      }
+      &.pending {
+        background-color: #DDAE00;
+      }
+      &.rejected {
+        background-color: #DC4624;
+      }
+    }
+  }
+
+  .frame-steps {
+    width: 100%;
+    padding-left: 160px;
+
+    & > div {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .frame-actions {
+    height: 48px;
+    padding: 0 8px;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.6);
+    border-top: 1px solid #252935;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    & > div {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .frame-action-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .frame-input {
+    background-color: #343846;
+    border: none;
+    outline: none;
+    margin: 0 8px;
+    height: 20px;
+    width: 56px;
+    font-size: 12px;
+    text-align: center;
+    color: #34CBD1;
+
+    &.invalid {
+      color: #DC4624;
+    }
+  }
+
+  .frame-collapse {
+    width: 48px;
+    height: 24px;
+    background-color: #292C38;
+    border-radius: 4px;
+    font-size: 20px;
+    justify-content: center;
+    cursor: pointer;
+
+    &.disabled {
+      color: rgba(255, 255, 255, 0.2);
+      cursor: not-allowed;
+    }
+    &.transform {
+      transform: rotate(180deg);
+    }
+  }
+
+  .frame-items-sort {
+    background-color: #292C38;
+    border-radius: 4px;
+    height: 24px;
+    padding: 0 12px;
+
+    & > span {
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      margin-left: -6px;
+      margin-right: 4px;
+    }
+  }
+}

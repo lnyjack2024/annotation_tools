@@ -1,0 +1,52 @@
+@import '../../../constants';
+
+.play-setting-radio-container{
+  float: right;
+  margin: 0px 12px 0px 0px;
+  & .ant-radio-button-wrapper{
+    &::before{
+      display: none;
+      background-color: transparent;
+    }
+  }
+  .ant-radio-group-solid .ant-radio-button-wrapper-checked:hover {
+    @include themify() {
+      background-color: theme(radio-button-checked-background-color) ;
+      color: theme(highlight-font-color);
+    }
+    border: 1px solid #504D66;
+    box-shadow: none;
+    border-width: 1px;
+    outline: none;
+  }
+  .ant-radio-button-wrapper-checked.ant-radio-button-wrapper:first-child{
+    border-color: #504D66;
+    box-shadow: none;
+  }
+  & .ant-radio-group .ant-radio-button-wrapper-checked{
+    @include themify() {
+      background-color: theme(radio-button-checked-background-color) ;
+      color: theme(highlight-font-color);
+    }
+    border: 1px solid #504D66;
+    box-shadow: none;
+    border-width: 1px;
+    outline: none;
+  }
+  & .play-mode-radio-button{
+    @include themify() {
+      background-color: theme(radio-button-background-color);
+      color: theme(default-font-color);
+    }
+    &:hover{
+      @include themify() {
+        color: theme(highlight-font-color);
+      }
+    }
+    border: 1px solid #504D66;
+    height: 32px;
+    width: 50px;
+    text-align: center ;
+    box-shadow: none ;
+  }
+}

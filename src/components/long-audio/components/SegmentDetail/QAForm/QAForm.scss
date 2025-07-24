@@ -1,0 +1,10 @@
+@import '../../../constants.scss';
+
+.qa-form-container{
+  @include themify() {
+    background-color: theme(line-detail-background-color);
+  }
+  margin: 16px;
+  padding: 20px;
+  border-radius: 4px;
+}

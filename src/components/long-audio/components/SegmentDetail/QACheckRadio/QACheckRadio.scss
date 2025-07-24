@@ -1,0 +1,29 @@
+@import '../../../constants.scss';
+
+.qa-check-radio-container{
+  @include themify() {
+    color: theme(default-font-color);
+  }
+  width: 100%;
+  height: fit-content;
+  background-color: transparent;
+  .qa-check-radio-button{
+    height: 32px;
+    min-width: 113px ;
+    margin-right: 16px;
+    border-radius: 4px;
+  }
+}
+.qa-check-radio-title{
+  @include themify() {
+    font-size: theme(default-font-size);
+  }
+  width: 100%;
+  margin-bottom: 5px;
+}
+.qa-check-radio-tip{
+  display: inline;
+  font-size: 12px;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+}

@@ -1,0 +1,27 @@
+export default {
+  CHAT_ATTR_EMPTY: 'Attribute to be filled',
+  CHAT_TERM_DESC_LABEL: 'Term Explanation:',
+  CHAT_TERM_MISUSES_LABEL: 'Common Misused Terms:',
+  CHAT_ORIGIN_VALUE_LABEL: 'Original Content',
+  CHAT_ORIGIN_VALUE_EXPAND: 'Expand',
+  CHAT_ORIGIN_VALUE_COLLAPSE: 'Collapse',
+  CHAT_RANK_EMPTY: 'No rating',
+  CHAT_RANK_SCORE: '{score} stars',
+  INSTRUCTION_LABEL: 'Hint:',
+  INPUT_FORMULA_MODAL_OUTPUT: 'Output',
+  INPUT_FORMULA_MODAL_EXAMPLES: 'Predefined Templates',
+  INPUT_FORMULA_MODAL_RECENT: 'Recently Used',
+  INPUT_FORMULA_MODAL_CANCEL: 'Cancel',
+  INPUT_FORMULA_MODAL_OK: 'OK',
+  INPUT_SWITCH_CONFIRM_TITLE: 'Prompt',
+  INPUT_SWITCH_CONFIRM_CANCEL: 'Cancel',
+  INPUT_SWITCH_CONFIRM_OK: 'Confirm Switch',
+  INPUT_EDITOR_DEFAULT: 'Rich Text Editor',
+  INPUT_EDITOR_MARKDOWN: 'Markdown Editor',
+  INPUT_MARKDOWN_INPUT: 'Input Area',
+  INPUT_MARKDOWN_OUTPUT: 'Display Area',
+  SUBJECT_LABEL: 'Conversation Subject',
+  SUBJECT_PLACEHOLDER: 'Please select',
+} as {
+  [key: string]: string;
+};

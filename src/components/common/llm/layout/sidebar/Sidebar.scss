@@ -1,0 +1,301 @@
+.llm-layout .sidebar {
+  float: left;
+  width: 100%;
+  height: calc(100% - 36px - 2px);
+  position: relative;
+
+  .tab-header {
+    height: 40px;
+    display: flex;
+    border-bottom: 1px solid #E4E7F2;
+    user-select: none;
+
+    &>div {
+      height: 100%;
+      line-height: 28px;
+      padding: 6px 20px;
+      cursor: pointer;
+      color: #666D80;
+      font-size: 14px;
+      position: relative;
+
+      &.active {
+        color: #4C5366;
+        font-weight: 500;
+        border-bottom: 2px solid #E4E7F2;
+      }
+    }
+
+    .count-alert {
+      position: absolute;
+      left: calc(50% + 12px);
+      top: 4px;
+      padding: 0 4px;
+      font-size: 10px;
+      color: #FFFFFF;
+      background-color: #DC4624;
+      border-radius: 50%;
+      height: 16px;
+      line-height: 16px;
+    }
+  }
+
+  .tab-content {
+    height: calc(100% - 36px);
+  }
+
+  .scroller {
+    height: 100%;
+  }
+
+  .panel-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .collapse-all {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 8px;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+  }
+
+  &-validation-header {
+    height: 32px;
+    border-bottom: 1px solid #E4E7F2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    color: #212633;
+
+    &>div {
+      display: flex;
+      align-items: center;
+    }
+
+    .icon-button {
+      color: #4C5366;
+      font-size: 16px;
+      padding: 0 4px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+
+  &-validation-content {
+    .error {
+      padding: 12px;
+      font-size: 12px;
+      color: #666D80;
+      border-bottom: 1px solid #E4E7F2;
+    }
+
+    .result-count {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .warning-item {
+      padding: 12px;
+      user-select: none;
+      transform: background-color 0.1s;
+      border-bottom: 1px solid #CED5E5;
+      background-color: #F5F7FF;
+
+      .cat-color-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 8px;
+        background-color: #FFFFFF;
+        flex-shrink: 0;
+      }
+
+      &:hover {
+        background-color: rgba(212, 80, 88, 0.20);
+      }
+
+      .warning-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        // .warning-title-left {
+        //   display: flex;
+        //   align-items: center;
+
+        //   .ant-checkbox-wrapper {
+        //     margin-right: 4px;
+        //   }
+        // }
+
+        .name {
+          color: rgba(255, 255, 255, 0.9);
+          background-color: #363C4C;
+          padding: 1px 8px;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+        }
+
+        // .warning-title-right {
+        //   display: flex;
+        //   justify-content: flex-end;
+
+        //   .ant-dropdown-trigger {
+        //     width: 24px;
+        //     height: 24px;
+        //     border-radius: 2px;
+        //     text-align: center;
+
+        //     &:hover {
+        //       background-color: #363C4D;
+        //     }
+        //   }
+
+        //   .ant-dropdown-trigger.ant-dropdown-open {
+        //     background-color: #0F121A;
+        //   }
+        // }
+
+        // .actions-container {
+        //   display: flex;
+        //   align-items: center;
+        // }
+
+        // .action {
+        //   width: 24px;
+        //   height: 24px;
+        //   border-radius: 2px;
+        //   cursor: pointer;
+        //   display: flex;
+        //   align-items: center;
+        //   justify-content: center;
+        // }
+      }
+
+      .warning-msg {
+        font-size: 12px;
+        color: #666D80;
+        margin-top: 8px;
+      }
+    }
+
+    .ant-collapse {
+      &>.ant-collapse-item {
+        &>.ant-collapse-header {
+          color: #212633;
+          border-bottom: 1px solid #E4E7F2;
+          padding: 6px 8px;
+          user-select: none;
+
+          .ant-collapse-arrow {
+            margin-right: 8px;
+          }
+
+          .ant-collapse-extra,
+          .collapse-title-extra {
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        &>.ant-collapse-content {
+          color: #212633;
+
+          &>.ant-collapse-content-box {
+            padding: 0px;
+
+            .selected-operation-container {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              color: rgba(255, 255, 255, 0.6);
+              line-height: 32px;
+              height: 32px;
+              padding: 0 12px;
+
+              .selected-operation-right {
+                >span:not(:first-child) {
+                  margin-left: 5px;
+                  ;
+                }
+
+                .selected-info {
+                  color: rgba(255, 255, 255, 0.5);
+                }
+
+                .unselect-all {
+                  color: rgba(255, 255, 255, 0.9);
+                  cursor: pointer;
+                }
+
+                .delete-all {
+                  color: #DC4624;
+                  cursor: pointer;
+
+                  &.isDisable {
+                    cursor: not-allowed;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.collapse-panel-reviews {
+          .ant-collapse-header {
+            display: flex;
+            align-items: center;
+
+            .collapse-header-customer-wrapper {
+              position: relative;
+              display: flex;
+              flex: 1;
+              justify-content: space-between;
+
+              // cursor: auto;
+              .collapse-header-customer {
+                display: flex;
+                flex: 1;
+                justify-content: space-between;
+              }
+
+              .collapse-panel-delete {
+                position: absolute;
+                top: 5px;
+                right: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+    .ant-checkbox:hover .ant-checkbox-inner,
+    .ant-checkbox-input:focus+.ant-checkbox-inner,
+    .ant-checkbox-inner {
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    .ant-checkbox-wrapper-checked {
+      .ant-checkbox-checked {
+        &:after {
+          border: 1px solid #5BA8FF !important;
+        }
+      }
+
+      .ant-checkbox-inner {
+        border: 1px solid #5BA8FF !important;
+        background-color: #5BA8FF;
+      }
+    }
+  }
+}

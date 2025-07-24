@@ -1,0 +1,29 @@
+export default {
+  CHAT_ATTR_EMPTY: '속성을 입력하세요.',
+  CHAT_TERM_DESC_LABEL: '용어 설명:',
+  CHAT_TERM_MISUSES_LABEL: '일반적인 오용어:',
+  CHAT_ORIGIN_VALUE_LABEL: '원본 내용',
+  CHAT_ORIGIN_VALUE_EXPAND: '펼치기',
+  CHAT_ORIGIN_VALUE_COLLAPSE: '접기',
+  CHAT_RANK_EMPTY: '평가 없음',
+  CHAT_RANK_SCORE: '{score} 점',
+  INSTRUCTION_LABEL: '안내:',
+  INPUT_FORMULA_MODAL_OUTPUT: '출력',
+  INPUT_FORMULA_MODAL_EXAMPLES: '템플릿',
+  INPUT_FORMULA_MODAL_RECENT: '최근 사용',
+  INPUT_FORMULA_MODAL_CANCEL: '취소',
+  INPUT_FORMULA_MODAL_OK: '확인',
+  INPUT_SWITCH_CONFIRM_TITLE: '알림',
+  INPUT_SWITCH_CONFIRM_CONTENT: '편집기를 전환하면 일부 형식이 손실될 수 있으므로 신중하게 작업하세요.',
+  INPUT_SWITCH_CONFIRM_CANCEL: '취소',
+  INPUT_SWITCH_CONFIRM_OK: '전환 확인',
+  INPUT_EDITOR_DEFAULT: '리치 텍스트 편집기',
+  INPUT_EDITOR_MARKDOWN: '마크다운 편집기',
+  INPUT_MARKDOWN_INPUT: '입력 영역',
+  INPUT_MARKDOWN_OUTPUT: '표시 영역',
+  SUBJECT_LABEL: '대화 주제',
+  SUBJECT_PLACEHOLDER: '선택하세요',
+
+} as {
+  [key: string]: string;
+};

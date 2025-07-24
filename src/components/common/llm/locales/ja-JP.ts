@@ -1,0 +1,28 @@
+export default {
+  CHAT_ATTR_EMPTY: '記入待ちの属性',
+  CHAT_TERM_DESC_LABEL: '用語説明：',
+  CHAT_TERM_MISUSES_LABEL: 'よく誤用される言葉：',
+  CHAT_ORIGIN_VALUE_LABEL: '元の内容',
+  CHAT_ORIGIN_VALUE_EXPAND: '開く',
+  CHAT_ORIGIN_VALUE_COLLAPSE: '閉める',
+  CHAT_RANK_EMPTY: '評価がありません',
+  CHAT_RANK_SCORE: '{score} 星',
+  INSTRUCTION_LABEL: 'チップス：',
+  INPUT_FORMULA_MODAL_OUTPUT: '出力',
+  INPUT_FORMULA_MODAL_EXAMPLES: 'プリセットテンプレート',
+  INPUT_FORMULA_MODAL_RECENT: '最近使用した',
+  INPUT_FORMULA_MODAL_CANCEL: 'キャンセル',
+  INPUT_FORMULA_MODAL_OK: '確定する',
+  INPUT_SWITCH_CONFIRM_TITLE: 'チップス',
+  INPUT_SWITCH_CONFIRM_CONTENT: 'エディタを変更すると、一部のフォーマットが失われるかもしれませんので、慎重に操作してください',
+  INPUT_SWITCH_CONFIRM_CANCEL: 'キャンセル',
+  INPUT_SWITCH_CONFIRM_OK: '切替を確認する',
+  INPUT_EDITOR_DEFAULT: 'リッチテキストエディタ',
+  INPUT_EDITOR_MARKDOWN: 'Markdownエディタ',
+  INPUT_MARKDOWN_INPUT: '入力エリア',
+  INPUT_MARKDOWN_OUTPUT: '展示エリア',
+  SUBJECT_LABEL: '対話のテーマ',
+  SUBJECT_PLACEHOLDER: '選択してください',
+} as {
+  [key: string]: string;
+};

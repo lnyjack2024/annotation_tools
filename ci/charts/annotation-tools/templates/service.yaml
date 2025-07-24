@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{.Chart.Name}}
+  namespace: loonshots-{{.Values.environment}}
+spec:
+  externalTrafficPolicy: Local
+  ports:
+  {{- toYaml .Values.service_ports | nindent 4 }}
+  selector:
+    app: {{.Chart.Name}}
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}

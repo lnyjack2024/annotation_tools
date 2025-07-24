@@ -1,0 +1,44 @@
+@import '../../../constants.scss';
+
+.attribute-form-container{
+  @include themify() {
+    color: theme(default-font-color);
+  }
+  width: 100%;
+  display: inline-block;
+  height: 60px;
+  background-color: transparent;
+  margin-right: 16px;
+  & .ant-radio-button-wrapper{
+    margin-right: 16px;
+    min-width: 113px;
+    white-space: nowrap;
+    width: fit-content;
+    border-radius: 4px;
+  }
+}
+
+.attribute-form-title {
+  @include themify() {
+    color: theme(default-font-color);
+  }
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.attribute-form-text {
+  margin-top: 5px;
+  background: transparent;
+  border-radius: 4px;
+  outline: none;
+  @include themify() {
+    color: theme(highlight-font-color);
+    border-color: theme(default-border-color);
+  }
+  &:hover, &:focus{
+    @include themify() {
+      border-color: theme(highlight-border-color);
+    }
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,27 @@
+.question-answering-app {
+  background-color: #F5F8FF;
+  align-items: center;
+
+  .chat-item-sorter {
+    flex-shrink: 0;
+    height: 40px;
+    min-width: 66px;
+    padding-left: 24px;
+    margin-right: -24px;
+    display: flex;
+    align-items: center;
+    color: #666D80;
+
+    &.sortable {
+      min-width: 88px;
+    }
+
+    &-handle {
+      width: 16px;
+      height: 16px;
+      display: flex;
+      align-items: center;
+      margin-right: 4px;
+    }
+  }
+}

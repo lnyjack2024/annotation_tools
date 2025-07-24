@@ -1,0 +1,33 @@
+@import "../../../constants";
+
+.task-select-container{
+  @include themify() {
+    background-color: theme(task-select-background-color);
+    font-size: theme(title-font-size);
+  }
+  position: relative;
+  top: 12px;
+  width: 30%;
+  margin: 0px auto;
+  text-align: center;
+  height: 36px;
+  line-height: 36px;
+}
+.task-select{
+  width: 100%;
+  overflow: hidden;
+}
+
+.task-select-container .ant-select .ant-select-selector{
+  @include themify() {
+    font-size: theme(title-font-size);
+    font-family: theme(default-font-family);
+    color: theme(default-font-color);
+  }
+  background-color: #FFFFFF00 !important;
+  border: none !important;
+  padding: 3px 0 0 20px;
+  box-shadow: none;
+}
+
+

@@ -1,0 +1,125 @@
+@import '../../../constants.scss';
+
+$line-height: 35px;
+$line-abstract-height-width: 250px;
+
+.line-abstract-item-container{
+  @include themify() {
+    color: theme(default-font-color);
+  }
+  background-color: transparent;
+  width: 100%;
+  & .line-abstract-item-text {
+    padding: 5px 0 8px;
+    .line-abstract-item-text-input{
+      height: 34px;
+      width: calc(100% - 30px);
+      @include themify() {
+        background-color: theme(input-background-color);
+        color: theme(default-font-color);
+      }
+      border: none;
+      outline: none ;
+      &:focus{
+        @include themify() {
+          color: theme(default-font-color);
+        }
+        border: none ;
+        outline: none ;
+        box-shadow: none ;
+      }
+      &:hover{
+        @include themify() {
+          border-color: theme(default-border-color)
+        }
+        border: none;
+      }
+    }
+  }
+  & .line-abstract-item-text-input-hw {
+    @include themify() {
+      background-color: theme(input-background-color);
+      color: theme(default-font-color);
+    }
+    border: none;
+    outline: none ;
+  }
+  .segment-abstract-copy {
+    position: absolute;
+    right: 36px;
+    bottom: 12px;
+    opacity: 0;
+    cursor: pointer;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}
+
+.segment-abstract-item-container:hover {
+  .segment-abstract-copy {
+    opacity: 1;
+  }
+}
+
+.line-abstract-item-color{
+  width: 6px;
+  float: left;
+  height: 100%;
+}
+
+.line-abstract-item-text-cnt{
+  display: flex;
+  height: 100%;
+  width: 30px;
+  float: right;
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.line-abstract-item-role{
+  @include themify() {
+    font-size: theme(default-font-size);
+    background-color: theme(default-tag-background-color);
+  }
+  width: fit-content;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  .line-abstract-item-role-color{
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    float: left;
+    margin: 7px 5px 7px 5px;
+  }
+  padding: 0px 5px;
+  margin-right: 10px;
+  margin-top: 6px;
+}
+
+.line-abstract-item-head{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 2px;
+}
+
+.line-abstract-item-category{
+  @include themify() {
+    font-size: theme(default-font-size);
+    background-color: theme(default-tag-background-color);
+  }
+  margin-right: 10px;
+  margin-top: 6px;
+  line-height: 20px;
+  width: fit-content;
+  padding: 0px 5px;
+  border-radius: 4px;
+  word-break: break-all;
+  cursor: pointer;
+}

@@ -1,0 +1,147 @@
+@import '../constants';
+
+html{
+  height: 100% !important;
+}
+body{
+  @include themify() {
+    background-color: theme(body-background-color);
+    color: theme(highlight-font-color);
+    font-size: theme(default-font-size);
+    font-family: theme(default-font-family);
+  }
+  height: 100% !important;
+  overflow-y: hidden;
+  & ::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+  }
+  & ::-webkit-scrollbar-track {
+    @include themify() {
+      background-color: theme(scrollbar-track-color);
+    }
+  }
+  & ::-webkit-scrollbar-thumb {
+    @include themify() {
+      background-color: theme(scrollbar-thumb-color);
+    }
+  }
+  & ::-webkit-scrollbar-thumb:hover{
+    background-color: #615D7C;
+  }
+  & #root{
+    height: 100% !important;
+  }
+  & .ant-popover-content{
+    & .ant-popover-arrow{
+      @include themify() {
+        border-color: theme(segment-navigation-item-title-color) !important;
+      }
+    }
+    & .ant-popover-inner{
+      @include themify() {
+        background-color: theme(segment-navigation-item-title-color);
+      }
+      .ant-popover-inner-content{
+        padding: 5px 16px;
+      }
+    }
+  }
+  & .ant-popover{
+    pointer-events: none;
+  }
+  .easyform-select-dropdown {
+    @include themify() {
+      background-color: theme(input-background-color);
+    }
+  }
+}
+button{
+  border: none;
+  background: none;
+  outline: none;
+}
+
+
+.video-annotation-container {
+  background-color: #434050;
+  display: block;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  .app-loading {
+    background: rgba(0,0,0,0.6);
+  }
+}
+.right-component-wrapper{
+  width: fit-content;
+  float: right;
+  width: 26%;
+  height: calc(100% - #{$audio-height} - 12px);
+}
+.left-component-wrapper {
+  width: calc(37% + #{-$default-margin});
+  float: left;
+  height: calc(100% - #{$audio-height});
+  display: flex;
+  flex-direction: column;
+}
+
+.video-annotation-mask{
+  position: absolute;
+  height: calc(100% - 60px);
+  width: 100%;
+  z-index: 10;
+  top: 60px;
+  @include themify() {
+    background-color: theme(body-background-color);
+  }
+}
+.video-annotation-mask-dot-wrapper{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.error-message {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.modal-root.ant-modal-confirm {
+  background: transparent;
+  .ant-modal-content {
+    background-color: #373737;
+    .ant-modal-confirm-title,
+    .ant-modal-confirm-content {
+      @include themify() {
+        color: theme(default-font-color);
+      }
+    }
+    .ant-btn {
+      background: transparent;
+      @include themify() {
+        color: theme(default-font-color);
+        border-color: theme(default-font-color);
+      }
+      &:hover,
+      &:focus {
+        @include themify() {
+          color: theme(highlight-font-color);
+          border-color: theme(highlight-font-color);
+        }
+      }
+
+      &.ant-btn-dangerous {
+        background: #FF7875;
+        border-color: #FF7875;
+
+        &:hover, &:focus {
+          color: #ffffff;
+          background: #CF5654;
+          border-color: #CF5654;
+        }
+      }
+    }
+  }
+}

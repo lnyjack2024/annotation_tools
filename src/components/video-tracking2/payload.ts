@@ -1,0 +1,101 @@
+export const methods = {
+  onSubmit: 'saveResult',
+  submitReviews: 'saveReviews',
+  getReviews: 'saveReviews',
+  isModified: 'isModified',
+  getStatistics: 'getStatistics',
+};
+
+export const samplePayload = {
+  locale: 'zh-CN',
+  tool_mode: 'QA_RW',
+  issue_types: '多标,漏标,错误',
+  tools: [
+    'rectangle',
+    'four-dots-rectangle',
+    'centerline-rectangle',
+    'ellipse',
+    'cuboid',
+    'l-shape',
+    'ocr',
+    'ocr-polygon',
+    'polygon',
+    'line',
+    'dot',
+  ],
+  ontology: [
+    {
+      class_name: '小轿车',
+      display_color: '#8BC534',
+      label_config: 'eyJmaWVsZHMiOlt7ImxhYmVsIjoi6aKc6ImyIiwidHlwZSI6IlJBRElPIiwibmFtZSI6ImNvbG9yIiwidmFsdWVUeXBlIjoic3RyaW5nIiwicmVxdWlyZWQiOnRydWUsIm9wdGlvbnMiOlt7InZhbHVlIjoi6buRIiwibGFiZWwiOiLpu5EiLCJkaXNhYmxlZCI6ZmFsc2V9LHsidmFsdWUiOiLnmb0iLCJsYWJlbCI6IueZvSIsImRpc2FibGVkIjpmYWxzZX0seyJ2YWx1ZSI6IueBsCIsImxhYmVsIjoi54GwIiwiZGlzYWJsZWQiOmZhbHNlfSx7InZhbHVlIjoi57qiIiwibGFiZWwiOiLnuqIiLCJkaXNhYmxlZCI6ZmFsc2V9LHsidmFsdWUiOiLok50iLCJsYWJlbCI6IuiTnSIsImRpc2FibGVkIjpmYWxzZX0seyJ2YWx1ZSI6Iue7vyIsImxhYmVsIjoi57u/IiwiZGlzYWJsZWQiOmZhbHNlfSx7InZhbHVlIjoi6buEIiwibGFiZWwiOiLpu4QiLCJkaXNhYmxlZCI6ZmFsc2V9LHsidmFsdWUiOiLlhbbku5YiLCJsYWJlbCI6IuWFtuS7liIsImRpc2FibGVkIjpmYWxzZX1dfSx7ImxhYmVsIjoi5YW25LuW6aKc6ImyIiwidHlwZSI6IlRFWFQiLCJuYW1lIjoib3RoZXJfY29sb3IiLCJ2YWx1ZVR5cGUiOiJzdHJpbmciLCJ2aXNpYmxlIjpmYWxzZX1dLCJydWxlcyI6W3siaWQiOiIxNjMxMjQwMTUzMTAxIiwiY29uZGl0aW9uIjoiMTYzMTI0MDE1MzEwMSIsImVmZmVjdHMiOlsiMTYzMTI0MDE1MzEwMSJdfV0sImVmZmVjdHMiOlt7ImlkIjoiMTYzMTI0MDE1MzEwMSIsImZpZWxkIjoib3RoZXJfY29sb3IiLCJhdHRyaWJ1dGUiOiJ2aXNpYmxlIiwidmFsdWUiOiJ0cnVlIn1dLCJjb25kaXRpb25zIjpbeyJpZCI6IjE2MzEyNDAxNTMxMDEiLCJ0eXBlIjoiRklFTEQiLCJvcGVyYXRvciI6ImVxdWFsX3RvIiwiZmllbGQiOiJjb2xvciIsInZhbHVlIjoi5YW25LuWIn1dLCJzaXplIjoiZGVmYXVsdCJ9',
+      children: [
+        {
+          name: '车身',
+          type: 'polygon',
+          count: 1,
+          label_config: 'eyJmaWVsZHMiOlt7ImxhYmVsIjoi6YGu5oyh562J57qnIiwidHlwZSI6IlJBRElPIiwibmFtZSI6Im9jY2x1c2lvbiIsInZhbHVlVHlwZSI6InN0cmluZyIsInJlcXVpcmVkIjp0cnVlLCJvcHRpb25zIjpbeyJ2YWx1ZSI6IjEiLCJsYWJlbCI6IuKJpDMwJSIsImdyb3VwIjoiIn0seyJ2YWx1ZSI6IjIiLCJsYWJlbCI6IjMwLTUwJSIsImdyb3VwIjoiIn0seyJ2YWx1ZSI6IjMiLCJsYWJlbCI6IjUwLTgwJSIsImdyb3VwIjoiIn0seyJ2YWx1ZSI6IjQiLCJsYWJlbCI6IuKJpTgwJSIsImdyb3VwIjoiIn1dfV0sInJ1bGVzIjpbXSwiZWZmZWN0cyI6W10sImNvbmRpdGlvbnMiOlt7ImlkIjoiMTYzMTI0MDE1MzEwMSIsInR5cGUiOiJGSUVMRCIsIm9wZXJhdG9yIjoiZXF1YWxfdG8iLCJmaWVsZCI6ImNvbG9yIiwidmFsdWUiOiLlhbbku5YifV0sInNpemUiOiJkZWZhdWx0In0=',
+        },
+        {
+          name: '接地点',
+          type: 'dot',
+          count: 4,
+        },
+      ],
+    },
+    {
+      class_name: '公交车',
+      display_color: '#F2A538',
+      children: [
+        {
+          name: '车身',
+          type: 'rectangle',
+          count: 1,
+        },
+        {
+          name: '车头',
+          type: 'rectangle',
+          count: 1,
+        },
+      ],
+    },
+    {
+      class_name: '遮挡物',
+      display_color: '#4169E1',
+      children: [
+        {
+          name: '遮挡部件',
+          type: 'polygon',
+        }
+      ],
+    },
+  ],
+  // relationships: '遮挡,覆盖',
+  // measurement_box: '[[500,500],[3,3]]',
+  // boundary_check: true,
+  // rotatable: true,
+  // auto_ocr: false,
+  // custom_check: '3748cb8e-5f87-4330-8ff8-07c31c5615be',
+  // label_mode: 'always',
+  // label_item: 'tool-name,item-name,item-number,attribute-values,item-attribute-values',
+  // label_style: 'transparent',
+  // label_format: 'compressed',
+  // point_label_item: 'attribute-values',
+  // label_config: 'eyJmaWVsZHMiOlt7ImxhYmVsIjoiU1dJVENIIiwidHlwZSI6IlNXSVRDSCIsIm5hbWUiOiJTV0lUQ0giLCJ2YWx1ZVR5cGUiOiJib29sZWFuIiwiZGVmYXVsdFZhbHVlIjoiZmFsc2UifSx7ImxhYmVsIjoiU0VMRUNUIiwidHlwZSI6IlNFTEVDVCIsIm5hbWUiOiJTRUxFQ1QiLCJ2YWx1ZVR5cGUiOiJzdHJpbmciLCJkZWZhdWx0VmFsdWUiOiJhIiwib3B0aW9ucyI6W3sidmFsdWUiOiJhIiwibGFiZWwiOiLllYoiLCJncm91cCI6IiJ9LHsidmFsdWUiOiJiIiwibGFiZWwiOiLlkKciLCJncm91cCI6IiJ9LHsidmFsdWUiOiJjIiwibGFiZWwiOiLku44iLCJncm91cCI6IiJ9LHsidmFsdWUiOiJkIiwibGFiZWwiOiLnmoQiLCJncm91cCI6IiJ9XX0seyJsYWJlbCI6IlJBRElPIiwidHlwZSI6IlJBRElPIiwibmFtZSI6IlJBRElPIiwidmFsdWVUeXBlIjoic3RyaW5nIiwiZGVmYXVsdFZhbHVlIjoiYSIsIm9wdGlvbnMiOlt7InZhbHVlIjoiYWEiLCJsYWJlbCI6IuWXt+WXtyIsImdyb3VwIjoiIn0seyJ2YWx1ZSI6ImJiIiwibGFiZWwiOiLniYjmnKwiLCJncm91cCI6IiJ9LHsidmFsdWUiOiJjYyIsImxhYmVsIjoi5bC65a+4IiwiZ3JvdXAiOiIifSx7InZhbHVlIjoiZGQiLCJsYWJlbCI6IuWvueeahCIsImdyb3VwIjoiIn1dfSx7ImxhYmVsIjoiQ0hFQ0tCT1giLCJ0eXBlIjoiQ0hFQ0tCT1giLCJuYW1lIjoiQ0hFQ0tCT1giLCJ2YWx1ZVR5cGUiOiJzdHJpbmciLCJvcHRpb25zIjpbeyJ2YWx1ZSI6ImFhYSIsImxhYmVsIjoi5Ze35Ze35Ze3IiwiZ3JvdXAiOiIifSx7InZhbHVlIjoiYmJiIiwibGFiZWwiOiLkuI3kuI3kuI0iLCJncm91cCI6IiJ9LHsidmFsdWUiOiJjY2MiLCJsYWJlbCI6IuaTpuaTpuaTpiIsImdyb3VwIjoiIn0seyJ2YWx1ZSI6ImRkZCIsImxhYmVsIjoi5Y2V54us55qEIiwiZ3JvdXAiOiIifV19XSwic2l6ZSI6ImRlZmF1bHQifQ==',
+  // label_config: 'eyJmaWVsZHMiOlt7ImxhYmVsIjoi57G75YirIiwidHlwZSI6IlJBRElPIiwibmFtZSI6ImVmLW9udG9sb2d5IiwidmFsdWVUeXBlIjoic3RyaW5nIiwiZGVmYXVsdFZhbHVlIjoi5py65Yqo6L2mIiwib3B0aW9ucyI6W3sidmFsdWUiOiLmnLrliqjovaYiLCJsYWJlbCI6IuacuuWKqOi9piJ9LHsidmFsdWUiOiLoh6rooYzovaYiLCJsYWJlbCI6IuiHquihjOi9piJ9LHsidmFsdWUiOiLpmpznoo3niakiLCJsYWJlbCI6IumanOeijeeJqSJ9XX0seyJsYWJlbCI6IjExMTExMSIsInR5cGUiOiJURVhUIiwibmFtZSI6IjEiLCJ2YWx1ZVR5cGUiOiJzdHJpbmciLCJ2aXNpYmxlIjpmYWxzZX1dLCJydWxlcyI6W3siaWQiOiIxNjIwNDYzMzI4OTE3IiwiY29uZGl0aW9uIjoiMTYyMDQ2MzMyODkxNyIsImVmZmVjdHMiOlsiMTYyMDQ2MzMyODkxNyJdfV0sImVmZmVjdHMiOlt7ImlkIjoiMTYyMDQ2MzMyODkxNyIsImZpZWxkIjoiMSIsImF0dHJpYnV0ZSI6InZpc2libGUiLCJ2YWx1ZSI6InRydWUifV0sImNvbmRpdGlvbnMiOlt7ImlkIjoiMTYyMDQ2MzMyODkxNyIsInR5cGUiOiJGSUVMRCIsIm9wZXJhdG9yIjoiZXF1YWxfdG8iLCJmaWVsZCI6ImVmLW9udG9sb2d5IiwidmFsdWUiOiLpmpznoo3niakifV0sInNpemUiOiJkZWZhdWx0In0=',
+  // hotkeys: 'eyJwb2ludCI6W3sia2V5IjoiNyIsInR5cGUiOiJ1cHNlcnQiLCJjb2xvciI6IiNlNzMyYTIiLCJhdHRyaWJ1dGVzIjp7IlN0YXJ0aW5nRnJvbVRoZUVuZCI6InN0YXJ0In19LHsia2V5IjoiOCIsInR5cGUiOiJvdmVyd3JpdGUiLCJjb2xvciI6IiNhMmU3MzIiLCJhdHRyaWJ1dGVzIjp7IlN0YXJ0aW5nRnJvbVRoZUVuZCI6ImVuZCJ9fSx7ImtleSI6IjkiLCJ0eXBlIjoib3ZlcndyaXRlIiwiYXR0cmlidXRlcyI6e319XX0=',
+  // ocr_tag_group: 'W3sibmFtZSI6IlRhZyIsInR5cGUiOiJzdGFuZGFsb25lIiwidGFncyI6W3sibmFtZSI6IjxFUlI+IiwidGV4dCI6Ilx1MjAyRDxFUlI+XHUyMDJDIn0seyJuYW1lIjoi2aEiLCJ0ZXh0Ijoi2aEifSx7Im5hbWUiOiLZoiIsInRleHQiOiLZoiJ9LHsibmFtZSI6ItmjIiwidGV4dCI6ItmjIn0seyJuYW1lIjoi2aQiLCJ0ZXh0Ijoi2aQifSx7Im5hbWUiOiLZpSIsInRleHQiOiLZpSJ9LHsibmFtZSI6ItmmIiwidGV4dCI6ItmmIn0seyJuYW1lIjoi2aciLCJ0ZXh0Ijoi2acifSx7Im5hbWUiOiLZqCIsInRleHQiOiLZqCJ9LHsibmFtZSI6ItmpIiwidGV4dCI6ItmpIn0seyJuYW1lIjoi2aAiLCJ0ZXh0Ijoi2aAifV19LHsibmFtZSI6IlRhZyIsInR5cGUiOiJ0YWciLCJ0YWdzIjpbeyJuYW1lIjoiUlRMIFJldmVyc2UiLCJwcmVmaXgiOiJcdTIwMkQiLCJzdWZmaXgiOiJcdTIwMkMifV19XQ==',
+  // frames: 'https://projecteng.oss-cn-shanghai.aliyuncs.com/0_ProjectData/upload_data/VIETNAM_ded679ef1d954b81bd4c44231fb27265/VIETNAM_LIST_TRAN-THI-HA-PHUONG_00046.jpg',
+  base_url: 'https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/15000.json',
+  // base_url: 'https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/tmp/bosch.pilot.json',
+  // base_url: 'https://projecteng.oss-cn-shanghai.aliyuncs.com/0_ProjectData/json_store/1a8d58482f284343a62a6fc34ebc0d49.json',
+  // frames: 'https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00001.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00101.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00201.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00301.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00401.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00501.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00601.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00701.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00801.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00901.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-01001.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-01101.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-01201.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-01301.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-01401.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-01501.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-01601.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-01701.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-01801.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-01901.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-02001.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-02101.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-02201.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-02301.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-02401.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-02501.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-02601.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-02701.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-02801.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-02901.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-03001.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-03101.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-03201.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-03301.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-03401.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-03501.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-03601.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-03701.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-03801.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-03901.jpeg',
+  // frames: "https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00001.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00011.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00021.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00031.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00041.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00051.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00061.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00071.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00081.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00091.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00101.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00111.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00121.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00131.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00141.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00151.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00161.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00171.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00181.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00191.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00201.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00211.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00221.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00231.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00241.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00251.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00261.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00271.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00281.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00291.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00301.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00311.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00321.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00331.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00341.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00351.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00361.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00371.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00381.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00391.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00401.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00411.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00421.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00431.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00441.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00451.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00461.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00471.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00481.jpeg,https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/test/video-test-25/image-00491.jpeg",
+  // frames: 'https://appen-lidar-qa.s3.cn-northwest-1.amazonaws.com.cn/tmp/ocr/1_56.jpg',
+  // frames: 'https://pe-test.s3.cn-northwest-1.amazonaws.com.cn/Mi/20200404/%E5%B0%8F%E8%AF%B4/20200402130121.jpg',
+  // frames: 'https://projecteng.oss-cn-shanghai.aliyuncs.com/0_ProjectData/upload_data/arabia_41a46a78aa3f41c6941b5e7e81a87b1e/ARABIA/ARABIA_BUSINESS-MENU/ARABIA_BUSINESS-MENU_DE_000004.jpg',
+  // review_from: 'https://oss-dev.appen.com.cn:9000/ticket-dev/191f909c-ac13-4dae-8808-408315fb465a/191f909c-ac13-4dae-8808-408315fb465a.video-track_task.0.result.json',
+  // review_from: 'https://oss-prd.appen.com.cn:9001/tool-prod/8568bd82-3494-402f-990c-f17a29a5e1ee/8568bd82-3494-402f-990c-f17a29a5e1ee.CLTmVhD2bCw3d3d_2021-07-14T103354Z.1535.result.json',
+
+  // frames: 'https://projecteng.oss-cn-shanghai.aliyuncs.com/0_ProjectData/upload_data/Arabic_0706_d22be075968b4439b5f7071677906f8b/NewArabic/ARABIC_WRITTEN_QUEEN_07062816.jpg',
+  // review_from: 'https://oss-prd.appen.com.cn:9001/tool-prod/84644aec-ce00-4280-9764-9e2427e01912/84644aec-ce00-4280-9764-9e2427e01912.6108fe75837ae973ab0c20fa_2021-08-04T033350Z.391.result.json',
+};
