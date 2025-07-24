@@ -210,9 +210,9 @@ const AdvertisementAnnotationApp = forwardRef((props, ref) => {
       if (!isPositionValid(result.position)) {
         errors.push('标记框位置');
       }
-      if (!result.snapshot) {
-        errors.push('缺少截图，请手动点击生成');
-      }
+      // if (!result.snapshot) {
+      //   errors.push('缺少截图，请手动点击生成');
+      // }
       if (errors.length > 0) {
         errorIds[result.key] = errors;
       }

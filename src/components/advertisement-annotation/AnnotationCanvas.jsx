@@ -147,9 +147,40 @@ class AnnotationCanvas extends React.Component {
       const { position } = this.getResult(resultsCopy, currentIndex);
       const displacement = [(clientX - x) / width - this.downX, (clientY - y) / height - this.downY];
       if (resizeAction) { // if there is resize action then use resize mode
+        const newPosition = position.map(p => p);
         resizeAction.forEach((action) => {
-          position[action] = clamp(position[action] + displacement[action % 2], 0, 1);
+          newPosition[action] = clamp(newPosition[action] + displacement[action % 2], 0, 1);
         });
+
+        // const resizeWidth = resizeAction.includes(0) || resizeAction.includes(2);
+        // const resizeHeight = resizeAction.includes(1) || resizeAction.includes(3);
+
+        let newW = Math.abs((newPosition[2] - newPosition[0]) * width);
+        let newH = Math.abs((newPosition[3] - newPosition[1]) * height);
+        const newRatio = newW / newH;
+
+        if (resizeAction.length === 1) {
+          const [action] = resizeAction;
+          if (action === 0 || action === 2) {
+            newH = (newW / 16) * 9;
+            newPosition[3] = newPosition[1] + (newH / height);
+          } else {
+            newW = (newH / 9) * 16;
+            newPosition[2] = newPosition[0] + (newW / width);
+          }
+        } else {
+          newH = (newW / 16) * 9;
+          if (resizeAction.includes(3)) {
+            newPosition[3] = newPosition[1] + (newH / height);
+          }
+          if (resizeAction.includes(1)) {
+            newPosition[1] = newPosition[3] - (newH / height);
+          }
+        }
+        position[0] = clamp(newPosition[0], 0, 1);
+        position[1] = clamp(newPosition[1], 0, 1);
+        position[2] = clamp(newPosition[2], 0, 1);
+        position[3] = clamp(newPosition[3], 0, 1);
       } else { // if there is no action then use move mode
         const [moveX, moveY] = displacement;
 
@@ -169,8 +200,17 @@ class AnnotationCanvas extends React.Component {
       this.downY = (clientY - y) / height;
       handleResultsChange(resultsCopy);
     } else if (this.props.currentMode === 'paint') {
+      const { startX, startY } = this.state;
+      if (startX == null || startY == null) return;
+      const originStartClientX = (startX * width) + x;
+      const originStartClientY = (startY * height) + y;
+      const rectWidth = clientX - originStartClientX;
+      const rectHeight = clientY - originStartClientY;
+      const newClientY = (Math.sign(rectHeight) * ((Math.abs(rectWidth) / 16) * 9)) + originStartClientY;
       const endX = clamp((clientX - x) / width, 0, 1);
-      const endY = clamp((clientY - y) / height, 0, 1);
+      const endY = clamp((newClientY - y) / height, 0, 1);
+      // const rectRatio = rectWidth / rectHeight;
+      // let newY = (Math.sign(rectHeight) * ((Math.abs(rectWidth) / 16) * 9)) + this.state.startY;
       this.setState({ endX, endY });
     }
   }

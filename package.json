@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
-    "@appen-china/easy-form": "1.10.6",
+    "@appen-china/easy-form": "./@appen-china:easy-form.zip",
     "@draft-js-plugins/editor": "^4.1.4",
     "@draft-js-plugins/image": "^4.1.4",
     "@flatten-js/core": "^1.2.24",

@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable no-nested-ternary */
 import React from 'react';
-import {Card, Radio, Cascader, Button, Tag, Input} from 'antd';
+import { Card, Radio, Cascader, Button, Tag, Input } from 'antd';
 import { formatTime, simpleClone, parseTime } from './util';
 import AdvertisementNameSelect from './AdvertisementNameSelect';
 import { getDeltaTime } from './AnnotationCanvas';
@@ -24,6 +24,15 @@ class AnnotationForm extends React.Component {
       currentTimestampType: null,
     });
     this.snapshotPlaceholder = null;
+  }
+
+  handleInputChange(v, key) {
+    const { results, currentMode, currentIndex, canvas, advertisementNameMap } = this.props;
+    if (currentMode !== 'edit') return;
+    const resultsCopy = simpleClone(results);
+    const item = this.getResult(resultsCopy, key);
+    item.name = v;
+    this.props.handleResultsChange(resultsCopy);
   }
 
   handleSelectChange(e, type, key) {
@@ -137,7 +146,7 @@ class AnnotationForm extends React.Component {
         if (currentMode === 'edit') {
           // resultsCopy.splice(index, 1);
           for (let i = 0; i < resultsCopy.length; i += 1) {
-            if (resultsCopy[i].key === key)  {
+            if (resultsCopy[i].key === key) {
               resultsCopy.splice(i, 1);
               break;
             }
@@ -305,9 +314,25 @@ class AnnotationForm extends React.Component {
                   >
                     <div className="advertisement-attribute-wrapper">
                       <label className="advertisement-attribute-label">
-                        识别结果
+                        中国元素词条
                       </label>
-                      <AdvertisementNameSelect
+                      <Input
+                        className="advertisement-attribute-select"
+                        value={item.name || ''}
+                        onChange={(e) => this.handleInputChange(e.target.value, item.key)}
+                        onFocus={(e) => {
+                          window.disableAdvertisementHotKeys = true;
+                        }}
+                        onBlur={(e) => {
+                          window.disableAdvertisementHotKeys = false;
+                        }}
+                        placeholder="输入中国元素词条"
+                        onPressEnter={(e) => this.handleSelectChange(e.target.value, 'name', item.key)}
+                        autoComplete="off"
+                        list="advertisement-name-list"
+                        disabled={isAnnotationReadonly(toolMode)}
+                      />
+                      {/* <AdvertisementNameSelect
                         index={item.key}
                         historySelect={historySelect}
                         handleSelectChange={this.handleSelectChange.bind(this)}
@@ -318,13 +343,28 @@ class AnnotationForm extends React.Component {
                         advertisementNameMap={advertisementNameMap}
                         tempOption={tempOption}
                         disabled={isAnnotationReadonly(toolMode)}
-                      />
+                      /> */}
                     </div>
                     <div className="advertisement-attribute-wrapper">
                       <label className="advertisement-attribute-label">
-                        广告形式
+                        视频描述
                       </label>
-                      <Cascader
+                      <Input
+                        className="advertisement-attribute-select"
+                        value={item.type?.length ? item.type.join(',') : ''}
+                        onChange={(e) => this.handleSelectChange(e.target.value.split(','), 'type', item.key)}
+                        onFocus={(e) => {
+                          window.disableAdvertisementHotKeys = true;
+                        }}
+                        onBlur={(e) => {
+                          window.disableAdvertisementHotKeys = false;
+                        }}
+                        placeholder="输入视频描述"
+                        autoComplete="off"
+                        list="advertisement-type-list"
+                        disabled={isAnnotationReadonly(toolMode)}
+                      />
+                      {/* <Cascader
                         showSearch
                         className="advertisement-attribute-select"
                         options={advertisementType}
@@ -335,7 +375,7 @@ class AnnotationForm extends React.Component {
                         disabled={isAnnotationReadonly(toolMode)}
                         onFocus={() => window.disableAdvertisementHotKeys = true}
                         onBlur={() => window.disableAdvertisementHotKeys = false}
-                      />
+                      /> */}
                     </div>
                     <div className="advertisement-attribute-wrapper">
                       <label className="advertisement-attribute-label">
@@ -344,10 +384,10 @@ class AnnotationForm extends React.Component {
                       <input
                         disabled={isAnnotationReadonly(toolMode)}
                         className="advertisement-timestamp"
-                        value={ this.state.currentFocus === item.key && this.state.currentTimestampType === 'start' ? this.state.currentFocusValue : formatTime(item.start)}
-                        onFocus={ (e) => this.handleTimestampFocus(e, item.key, 'start') }
-                        onBlur={ (e) => this.handleTimestampBlur(e, item.key, 'start') }
-                        onChange={(e) => { this.setState({currentFocusValue: e.target.value})}}
+                        value={this.state.currentFocus === item.key && this.state.currentTimestampType === 'start' ? this.state.currentFocusValue : formatTime(item.start)}
+                        onFocus={(e) => this.handleTimestampFocus(e, item.key, 'start')}
+                        onBlur={(e) => this.handleTimestampBlur(e, item.key, 'start')}
+                        onChange={(e) => { this.setState({ currentFocusValue: e.target.value }) }}
                       />
                       {/*<input
                         readOnly
@@ -382,10 +422,10 @@ class AnnotationForm extends React.Component {
                         disabled={isAnnotationReadonly(toolMode)}
                         className="advertisement-timestamp"
                         /*value={formatTime(item.end)}*/
-                        value={ this.state.currentFocus === item.key && this.state.currentTimestampType === 'end' ? this.state.currentFocusValue : formatTime(item.end)}
-                        onFocus={ (e) => this.handleTimestampFocus(e, item.key, 'end') }
-                        onBlur={ (e) => this.handleTimestampBlur(e, item.key, 'end') }
-                        onChange={(e) => { this.setState({currentFocusValue: e.target.value})}}
+                        value={this.state.currentFocus === item.key && this.state.currentTimestampType === 'end' ? this.state.currentFocusValue : formatTime(item.end)}
+                        onFocus={(e) => this.handleTimestampFocus(e, item.key, 'end')}
+                        onBlur={(e) => this.handleTimestampBlur(e, item.key, 'end')}
+                        onChange={(e) => { this.setState({ currentFocusValue: e.target.value }) }}
                       />
                       <Button
                         className="advertisement-timestamp-reset"
